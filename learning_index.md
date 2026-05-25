@@ -14,7 +14,8 @@ Week 1 - Cleared
 Day 8 - Cleared
 Day 9 - Cleared
 Day 10 - Cleared
-Next: Day 11 - Functions
+Day 11 - Cleared
+Next: Day 12 - Modules
 ```
 
 Detailed status:
@@ -30,14 +31,15 @@ Day 7 - Cleared
 Day 8 - Cleared
 Day 9 - Cleared
 Day 10 - Cleared
-Next: Day 11 - Functions
+Day 11 - Cleared
+Next: Day 12 - Modules
 ```
 
 ---
 
 ## Current Project Sources structure
 
-Current preferred source structure after Day 10:
+Current preferred source structure after Day 11:
 
 ```text
 README.md
@@ -46,13 +48,14 @@ week1_notes.md
 day8_notes.md
 day9_notes.md
 day10_notes.md
+day11_notes.md
 ```
 
 Notes:
 
 ```text
 Day 1 to Day 7 are consolidated into week1_notes.md.
-day8_notes.md, day9_notes.md, and day10_notes.md stay separate because Week 2 is still active.
+day8_notes.md, day9_notes.md, day10_notes.md, and day11_notes.md stay separate because Week 2 is still active.
 When Day 8 to Day 14 are complete, consolidate them into week2_notes.md.
 ```
 
@@ -72,6 +75,7 @@ When Day 8 to Day 14 are complete, consolidate them into week2_notes.md.
 | Day 8 | Dictionaries: key-value pairs, access, get(), update, removal, views, copy, nested dictionaries | Cleared | `day8_notes.md` |
 | Day 9 | Conditionals: if, else, elif, logical checks, nesting, truthy/falsy, short-hand conditionals | Cleared | `day9_notes.md` |
 | Day 10 | Loops: for, while, range(), break, continue, loop else, nested loops | Cleared | `day10_notes.md` |
+| Day 11 | Functions: def, calls, return, parameters, defaults, keyword args, *args, callbacks | Cleared | `day11_notes.md` |
 
 ---
 
@@ -135,6 +139,7 @@ Current Week 2 notes:
 day8_notes.md
 day9_notes.md
 day10_notes.md
+day11_notes.md
 ```
 
 Completed so far:
@@ -143,12 +148,13 @@ Completed so far:
 Day 8 - Dictionaries
 Day 9 - Conditionals
 Day 10 - Loops
+Day 11 - Functions
 ```
 
 Next:
 
 ```text
-Day 11 - Functions
+Day 12 - Modules
 ```
 
 ---
@@ -156,21 +162,18 @@ Day 11 - Functions
 ## Next day
 
 ```text
-Day 11 - Functions
+Day 12 - Modules
 ```
 
-Expected Day 11 focus:
+Expected Day 12 focus:
 
 ```text
-defining functions
-calling functions
-functions without parameters
-functions with parameters
-return values
-default parameters
-keyword arguments
-arbitrary arguments
-function scope basics
+what modules are
+creating a module
+importing a module
+importing functions from a module
+renaming imports
+selected built-in modules
 final mixed exercise
 ```
 
@@ -274,6 +277,27 @@ Be careful with continue in while loops because it can skip the counter update.
 Loop else runs only when the loop finishes without break.
 Nested loops run the inner loop fully for each outer loop item.
 Nested loops multiply work, so use them carefully.
+Use def to define a function.
+Calling a function runs it.
+Defining a function does not run it automatically.
+Use print() when a function only needs to display output.
+Use return when a function should produce a reusable value.
+A function returns None by default if there is no return.
+Code after return does not run.
+A parameter is a placeholder in the function definition.
+An argument is the actual value passed during the function call.
+Positional arguments are matched by order.
+Keyword arguments are matched by parameter name.
+Use default parameters for fallback values.
+Required parameters must come before default parameters.
+Use *args when a function should accept any number of positional arguments.
+*args collects values into a tuple inside the function.
+Use if not topics to check whether no arbitrary arguments were passed.
+A clean beginner function pattern is required_param, *args, default_param=value.
+Anything after *args should usually be passed by keyword.
+Functions can be passed as arguments to other functions.
+Pass function_name when passing the function itself.
+Use function_name() only when you want to call it immediately.
 ```
 
 ---
@@ -347,6 +371,13 @@ Weekly notes should summarize and organize; they should not paste all daily note
 | `continue` in while loops | Update the counter before `continue` if `continue` would skip the normal update |
 | Generic repeated labels | Use specific labels when terminal output gets long |
 | Nested loop variable reuse | Do not reuse the same variable name for outer and inner loop items |
+| print() vs return confusion | print() shows output; return gives a reusable value back to the program |
+| Dead code after return | Code after return does not run; remove it outside demos |
+| Prompt string/casing mismatches | Exact punctuation and casing matter in assessment-style prompts |
+| Function call vs assignment mistake | Use function_name(...) to call; function_name = (...) overwrites the function name |
+| *args naming mismatch | Generic *args works, but follow prompt-specific names like *topics when requested |
+| Function callback call timing | Pass function_name without () when another function should call it later |
+| Default and *args order confusion | Prefer required_param, *args, default_param=value for the beginner pattern |
 
 ---
 
@@ -527,10 +558,35 @@ Nested loops run the full inner loop for every outer item.
 Nested loops multiply work and can become slow on large data.
 ```
 
+
+### Day 11
+
+```text
+Functions group reusable logic.
+Use def to define a function.
+Calling a function runs it.
+Use print() to display output.
+Use return to produce a reusable value.
+A function returns None by default without return.
+Code after return does not run.
+Parameters are placeholders in function definitions.
+Arguments are real values passed during function calls.
+Positional arguments are matched by order.
+Keyword arguments are matched by parameter name.
+Default parameters provide fallback values.
+Required parameters come before default parameters.
+Use *args for any number of positional arguments.
+*args becomes a tuple inside the function.
+You can loop through *args.
+Use required_param, *args, default_param=value as the clean beginner pattern.
+Pass function_name without () when passing a function into another function.
+Use function_name() when calling the function immediately.
+```
+
 ---
 
 ## Current confidence level
 
 ```text
-Ready for Day 11 - Functions
+Ready for Day 12 - Modules
 ```
