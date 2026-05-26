@@ -15,7 +15,8 @@ Day 8 - Cleared
 Day 9 - Cleared
 Day 10 - Cleared
 Day 11 - Cleared
-Next: Day 12 - Modules
+Day 12 - Cleared
+Next: Day 13 - List Comprehension
 ```
 
 Detailed status:
@@ -32,14 +33,15 @@ Day 8 - Cleared
 Day 9 - Cleared
 Day 10 - Cleared
 Day 11 - Cleared
-Next: Day 12 - Modules
+Day 12 - Cleared
+Next: Day 13 - List Comprehension
 ```
 
 ---
 
 ## Current Project Sources structure
 
-Current preferred source structure after Day 11:
+Current preferred source structure after Day 12:
 
 ```text
 README.md
@@ -49,13 +51,14 @@ day8_notes.md
 day9_notes.md
 day10_notes.md
 day11_notes.md
+day12_notes.md
 ```
 
 Notes:
 
 ```text
 Day 1 to Day 7 are consolidated into week1_notes.md.
-day8_notes.md, day9_notes.md, day10_notes.md, and day11_notes.md stay separate because Week 2 is still active.
+day8_notes.md through day12_notes.md stay separate because Week 2 is still active.
 When Day 8 to Day 14 are complete, consolidate them into week2_notes.md.
 ```
 
@@ -76,6 +79,7 @@ When Day 8 to Day 14 are complete, consolidate them into week2_notes.md.
 | Day 9 | Conditionals: if, else, elif, logical checks, nesting, truthy/falsy, short-hand conditionals | Cleared | `day9_notes.md` |
 | Day 10 | Loops: for, while, range(), break, continue, loop else, nested loops | Cleared | `day10_notes.md` |
 | Day 11 | Functions: def, calls, return, parameters, defaults, keyword args, *args, callbacks | Cleared | `day11_notes.md` |
+| Day 12 | Modules: custom modules, import styles, aliases, built-in modules, __pycache__ | Cleared | `day12_notes.md` |
 
 ---
 
@@ -140,6 +144,7 @@ day8_notes.md
 day9_notes.md
 day10_notes.md
 day11_notes.md
+day12_notes.md
 ```
 
 Completed so far:
@@ -149,12 +154,13 @@ Day 8 - Dictionaries
 Day 9 - Conditionals
 Day 10 - Loops
 Day 11 - Functions
+Day 12 - Modules
 ```
 
 Next:
 
 ```text
-Day 12 - Modules
+Day 13 - List Comprehension
 ```
 
 ---
@@ -162,18 +168,19 @@ Day 12 - Modules
 ## Next day
 
 ```text
-Day 12 - Modules
+Day 13 - List Comprehension
 ```
 
-Expected Day 12 focus:
+Expected Day 13 focus:
 
 ```text
-what modules are
-creating a module
-importing a module
-importing functions from a module
-renaming imports
-selected built-in modules
+what list comprehension is
+normal loops vs list comprehension
+list comprehension with strings
+list comprehension with numbers
+list comprehension with conditionals
+list comprehension with if / else
+possibly lambda awareness if needed, but do not over-combine
 final mixed exercise
 ```
 
@@ -298,6 +305,24 @@ Anything after *args should usually be passed by keyword.
 Functions can be passed as arguments to other functions.
 Pass function_name when passing the function itself.
 Use function_name() only when you want to call it immediately.
+A module is a Python file.
+Use modules to separate reusable helper code from execution logic.
+Import a module using the file name without .py.
+Full module imports require dot notation: module_name.function_name().
+Specific function imports allow direct calls without the module prefix.
+Aliases can rename modules or functions locally.
+Avoid import * while learning.
+Built-in modules must be imported before use.
+Do not name files after built-in modules like math.py, random.py, datetime.py, os.py, or sys.py.
+math.pi is a value, not a function.
+math.pow() returns a float; ** is usually cleaner for exponent work.
+random.randint(start, end) includes the end value.
+random.shuffle(list_name) mutates the list in place and returns None.
+datetime.datetime.now() returns current date/time.
+os.getcwd() returns the current working directory.
+sys.version returns Python runtime version information.
+sys.platform returns the platform name.
+__pycache__ is normal and should be ignored in Git.
 ```
 
 ---
@@ -313,7 +338,7 @@ Review submitted code before moving forward.
 Do not move to the next topic until the current one is cleared.
 After reviewing and clearing each topic, ask before proceeding to the next topic.
 Reuse existing variables in the same file when appropriate.
-Do not introduce imports/modules too early.
+Do not introduce future concepts too early.
 End each day with a focused mixed final exercise.
 Avoid overly long final exercises; keep them focused instead of 35+ item checklists.
 Use fresh examples/scenarios in final mixed exercises instead of repeating the exact same topic-exercise examples.
@@ -378,6 +403,14 @@ Weekly notes should summarize and organize; they should not paste all daily note
 | *args naming mismatch | Generic *args works, but follow prompt-specific names like *topics when requested |
 | Function callback call timing | Pass function_name without () when another function should call it later |
 | Default and *args order confusion | Prefer required_param, *args, default_param=value for the beginner pattern |
+| Import/file-name mismatch | If a file is renamed, update all imports that reference it |
+| Built-in module filename conflict | Do not create files like math.py or random.py |
+| `import *` confusion | Avoid it; it hides where names came from |
+| `math.pi()` mistake | `math.pi` is a value, not a function |
+| `random.shuffle()` assignment trap | It mutates the list and returns None |
+| Stale/unsaved file run | Save all changed files before rerunning, especially helper modules |
+| Helper function returns `None` | Check whether the function used print instead of return |
+| `__pycache__` confusion | Normal generated folder; ignore it in Git |
 
 ---
 
@@ -452,7 +485,7 @@ A one-item tuple needs a trailing comma.
 Tuple items cannot be changed directly.
 Tuple variables can be reassigned to a new tuple.
 Use list() to temporarily modify tuple data.
-Use tuple() to convert a list back to a tuple.
+Use tuple() to convert a list back into a tuple.
 Use tuples for fixed grouped data.
 Use lists for data that should change.
 ```
@@ -558,7 +591,6 @@ Nested loops run the full inner loop for every outer item.
 Nested loops multiply work and can become slow on large data.
 ```
 
-
 ### Day 11
 
 ```text
@@ -583,10 +615,36 @@ Pass function_name without () when passing a function into another function.
 Use function_name() when calling the function immediately.
 ```
 
+### Day 12
+
+```text
+A module is a Python file.
+Use modules to separate reusable helper code from execution logic.
+Import a module using the file name without .py.
+Full module imports require dot notation.
+Specific imports allow direct function calls.
+Aliases can rename modules or functions locally.
+Avoid import * while learning.
+Built-in modules must be imported before use.
+math provides math utilities like sqrt(), ceil(), floor(), pi, and pow().
+math.pi is a value, not a function.
+math.pow() returns a float; ** is usually cleaner for exponent work.
+random provides random values and selection tools.
+random.randint(start, end) includes the end value.
+random.shuffle() mutates the original list and returns None.
+datetime.datetime.now() returns the current date/time.
+os.getcwd() returns the current working directory.
+sys.version returns Python version information.
+sys.platform returns the platform name.
+Do not name your files after built-in modules.
+__pycache__ is normal and should be ignored in Git.
+If output shows None, check whether a function printed instead of returned, and make sure files were saved before running.
+```
+
 ---
 
 ## Current confidence level
 
 ```text
-Ready for Day 12 - Modules
+Ready for Day 13 - List Comprehension
 ```
