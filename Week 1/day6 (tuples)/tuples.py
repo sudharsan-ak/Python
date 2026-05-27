@@ -1,4 +1,5 @@
 # Topic 1 - Creating tuples, len(), and type()
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create a tuple called languages with these values:
 # "JavaScript", "TypeScript", "Python", "Java"
 languages = ("JavaScript", "TypeScript", "Python", "Java")
@@ -42,6 +43,7 @@ print(type(favorite_language))
 
 # ---------------------------------------------------------------------
 # Topic 2 - Accessing tuple items
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Print the first item from languages
 print(languages[0])
 
@@ -77,6 +79,7 @@ print(profile[1:-1])
 
 # ---------------------------------------------------------------------
 # Topic 3 - Checking items and tuple immutability
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 # 1. Check whether "Python" exists in languages and store the result in has_python
 has_python = "Python" in languages
 
@@ -122,6 +125,7 @@ print(coordinates)
 
 # ---------------------------------------------------------------------
 # Topic 4 - Tuple to list and list to tuple conversion
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Convert languages into a list and store it in languages_list
 languages_list = list(languages)
 
@@ -167,6 +171,7 @@ print(updated_frontend_skills)
 
 # ---------------------------------------------------------------------
 # Topic 5 - Joining and deleting tuples
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Create a tuple called backend_skills with:
 # "Node.js", "Express", "MongoDB", "PostgreSQL"
 backend_skills = ("Node.js", "Express", "MongoDB", "PostgreSQL")
@@ -220,6 +225,7 @@ del temporary_tuple
 
 # ---------------------------------------------------------------------
 # Topic 6 - Tuple use cases and beginner gotchas
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a tuple called rgb_color with values 255, 255, 255
 rgb_color = (255, 255, 255)
 

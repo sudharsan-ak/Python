@@ -1,4 +1,5 @@
-# Part 1 - Built-in functions
+# Topic 1 - Built-in functions
+print(f"{'-' * 30}Topic 1{'-' * 30}")
 # 1. Create a variable called name and store your name
 name = "Sudharsan"
 # 2. Print the length of your name
@@ -15,7 +16,8 @@ user_age = int(user_age) + 1
 print(f"Next year, you will be {user_age} years old")
 
 # ---------------------------------------------------------------------
-# Part 2: Variable Naming Rules
+# Topic 2: Variable Naming Rules
+print(f"{'-' * 30}Topic 2{'-' * 30}")
 # 1. Create variables:
 # first_name
 # last_name
@@ -45,7 +47,8 @@ print(f"Current city: {current_city}")
 print(f"Can relocate: {can_relocate}")
 
 # ---------------------------------------------------------------------
-# Part 3: multiple variable assignment and assignment shortcuts.
+# Topic 3: multiple variable assignment and assignment shortcuts.
+print(f"{'-' * 30}Topic 3{'-' * 30}")
 # 1. Assign first_name, last_name, and age in one line
 first_name, last_name, age = "Sudharsan", "Srinivasan", 30
 # 2. Print each variable
@@ -72,7 +75,8 @@ print(skill_two)
 print(skill_three)
 
 # ---------------------------------------------------------------------
-# Part 4: Python Data Types
+# Topic 4: Python Data Types
+print(f"{'-' * 30}Topic 4{'-' * 30}")
 # 1. Create a string variable called name
 name = "Sudharsan"
 
@@ -124,7 +128,8 @@ print(skills[0])
 print(profile["name"])
 
 # ---------------------------------------------------------------------
-# Part 5: Type Conversion / Casting
+# Topic 5: Type Conversion / Casting
+print(f"{'-' * 30}Topic 5{'-' * 30}")
 # 1. Ask the user for their age
 # 2. Convert it to int
 # 3. Print their age next year
@@ -153,7 +158,8 @@ name = "Sudharsan"
 print(list(name))
 
 # ---------------------------------------------------------------------
-# Part 6: Numbers and Arithmetic
+# Topic 6: Numbers and Arithmetic
+print(f"{'-' * 30}Topic 6{'-' * 30}")
 # 1. Create two variables:
 # num1 = 20
 # num2 = 6

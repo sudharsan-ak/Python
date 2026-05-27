@@ -1,133 +1,138 @@
-# # Part 1 - Boolean
-# # 1. Create a variable called is_software_engineer and set it to True
-# is_software_engineer = True
+# Topic 1 - Boolean
+print(f"{'-' * 30}Topic 1{'-' * 30}")
+# 1. Create a variable called is_software_engineer and set it to True
+is_software_engineer = True
 
-# # 2. Create a variable called is_learning_python and set it to True
-# is_learning_python = True
+# 2. Create a variable called is_learning_python and set it to True
+is_learning_python = True
 
-# # 3. Create a variable called has_finished_day_3 and set it to False
-# has_finished_day_3 = False
+# 3. Create a variable called has_finished_day_3 and set it to False
+has_finished_day_3 = False
 
-# # 4. Print all three variables
-# print(is_software_engineer)
-# print(is_learning_python)
-# print(has_finished_day_3)
+# 4. Print all three variables
+print(is_software_engineer)
+print(is_learning_python)
+print(has_finished_day_3)
 
-# # 5. Print the type of one boolean variable
-# print(type(has_finished_day_3))
-
-# ---------------------------------------------------------------------
-# # Part 2: Assignment Operators
-# # 1. Create a variable called score and set it to 50
-# score = 50
-
-# # 2. Add 10 to score using +=
-# score += 10
-
-# # 3. Print score
-# print(score)
-
-# # 4. Subtract 5 from score using -=
-# score -= 5
-
-# # 5. Print score
-# print(score)
-
-# # 6. Multiply score by 2 using *=
-# score *= 2
-
-# # 7. Print score
-# print(score)
-
-# # 8. Divide score by 10 using /=
-# score /= 10
-
-# # 9. Print score
-# print(score)
-
-# # 10. Create a variable called counter and set it to 0
-# counter = 0
-
-# # 11. Increase counter by 1 using +=
-# counter += 1
-
-# # 12. Print counter
-# print(counter)
+# 5. Print the type of one boolean variable
+print(type(has_finished_day_3))
 
 # ---------------------------------------------------------------------
-# # Part 3: Comparison Operators
-# # 1. Create a variable called age and set it to 30
-# age = 30
+# Topic 2: Assignment Operators
+print(f"{'-' * 30}Topic 2{'-' * 30}")
+# 1. Create a variable called score and set it to 50
+score = 50
 
-# # 2. Print whether age is equal to 30 using ==
-# print(age == 30)
+# 2. Add 10 to score using +=
+score += 10
 
-# # 3. Print whether age is not equal to 25 using !=
-# print(age != 25)
+# 3. Print score
+print(score)
 
-# # 4. Print whether age is greater than 18 using >
-# print(age > 18)
+# 4. Subtract 5 from score using -=
+score -= 5
 
-# # 5. Print whether age is less than 40 using <
-# print(age < 40)
+# 5. Print score
+print(score)
 
-# # 6. Print whether age is greater than or equal to 30 using >=
-# print(age >= 30)
+# 6. Multiply score by 2 using *=
+score *= 2
 
-# # 7. Print whether age is less than or equal to 29 using <=
-# print(age <= 29)
+# 7. Print score
+print(score)
 
-# # 8. Create two variables:
-# # score = 85
-# # passing_score = 70
-# score, passing_score = 85, 70
+# 8. Divide score by 10 using /=
+score /= 10
 
-# # 9. Print whether score is greater than or equal to passing_score
-# print(score >= passing_score)
+# 9. Print score
+print(score)
 
-# # 10. Print whether score is less than passing_score
-# print(score < passing_score)
+# 10. Create a variable called counter and set it to 0
+counter = 0
+
+# 11. Increase counter by 1 using +=
+counter += 1
+
+# 12. Print counter
+print(counter)
 
 # ---------------------------------------------------------------------
-# # Part 4 - Logical Operators
-# # 1. Create a variable called age and set it to 30
-# age = 30
+# Topic 3: Comparison Operators
+print(f"{'-' * 30}Topic 3{'-' * 30}")
+# 1. Create a variable called age and set it to 30
+age = 30
 
-# # 2. Create a variable called has_experience and set it to True
-# has_experience = True
+# 2. Print whether age is equal to 30 using ==
+print(age == 30)
 
-# # 3. Print whether age is greater than or equal to 18 AND has_experience is True
-# print(age >= 18 and has_experience)
+# 3. Print whether age is not equal to 25 using !=
+print(age != 25)
 
-# # 4. Create a variable called has_degree and set it to False
-# has_degree = False
+# 4. Print whether age is greater than 18 using >
+print(age > 18)
 
-# # 5. Print whether has_degree OR has_experience is True
-# print(has_degree or has_experience)
+# 5. Print whether age is less than 40 using <
+print(age < 40)
 
-# # 6. Create a variable called is_blocked and set it to False
-# is_blocked = False
+# 6. Print whether age is greater than or equal to 30 using >=
+print(age >= 30)
 
-# # 7. Print the opposite of is_blocked using not
-# print(not is_blocked)
+# 7. Print whether age is less than or equal to 29 using <=
+print(age <= 29)
 
-# # 8. Create a variable called score and set it to 85
+# 8. Create two variables:
 # score = 85
+# passing_score = 70
+score, passing_score = 85, 70
 
-# # 9. Print whether score is greater than 70 AND less than 100
-# print(score > 70 and score < 100)
+# 9. Print whether score is greater than or equal to passing_score
+print(score >= passing_score)
 
-# # 10. Create a variable called is_weekend and set it to False
-# is_weekend = False
-
-# # 11. Create a variable called is_holiday and set it to True
-# is_holiday = True
-
-# # 12. Print whether it is either weekend OR holiday
-# print(is_weekend or is_holiday)
+# 10. Print whether score is less than passing_score
+print(score < passing_score)
 
 # ---------------------------------------------------------------------
-# Part 5 - Operator Precedence
+# Topic 4 - Logical Operators
+print(f"{'-' * 30}Topic 4{'-' * 30}")
+# 1. Create a variable called age and set it to 30
+age = 30
+
+# 2. Create a variable called has_experience and set it to True
+has_experience = True
+
+# 3. Print whether age is greater than or equal to 18 AND has_experience is True
+print(age >= 18 and has_experience)
+
+# 4. Create a variable called has_degree and set it to False
+has_degree = False
+
+# 5. Print whether has_degree OR has_experience is True
+print(has_degree or has_experience)
+
+# 6. Create a variable called is_blocked and set it to False
+is_blocked = False
+
+# 7. Print the opposite of is_blocked using not
+print(not is_blocked)
+
+# 8. Create a variable called score and set it to 85
+score = 85
+
+# 9. Print whether score is greater than 70 AND less than 100
+print(score > 70 and score < 100)
+
+# 10. Create a variable called is_weekend and set it to False
+is_weekend = False
+
+# 11. Create a variable called is_holiday and set it to True
+is_holiday = True
+
+# 12. Print whether it is either weekend OR holiday
+print(is_weekend or is_holiday)
+
+# ---------------------------------------------------------------------
+# Topic 5 - Operator Precedence
+print(f"{'-' * 30}Topic 5{'-' * 30}")
 # 1. Create a variable called result1 and store 10 + 5 * 2
 result1 = 10 + 5 * 2
 

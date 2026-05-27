@@ -1,5 +1,6 @@
 # ---------------------------------------------------------------------
 # Topic 1: Set Basics
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create a set called languages with:
 # "JavaScript", "TypeScript", "Python", "Java", "Python"
 languages = {"JavaScript", "TypeScript", "Python", "Java", "Python"}
@@ -40,6 +41,7 @@ print(type(empty_data))
 
 # ---------------------------------------------------------------------
 # Topic 2: Membership Checks + No Indexing
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Check whether "Python" exists in languages and store it in has_python
 has_python = "Python" in languages
 
@@ -79,6 +81,7 @@ print(f"Is Node.js missing from frontend skills: {missing_node}")
 
 # ---------------------------------------------------------------------
 # Topic 3: Adding and Updating Sets
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 # 1. Add "TypeScript" to frontend_skills using add()
 frontend_skills.add("TypeScript")
 
@@ -126,6 +129,7 @@ print(f"Final Updated Full Stack Skills: {full_stack_skills}")
 
 # ---------------------------------------------------------------------
 # Topic 4: Removing, Clearing, and Deleting Sets
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Remove "Express" from backend_skills using remove()
 backend_skills.remove("Express")
 
@@ -178,6 +182,7 @@ del old_skills
 
 # ---------------------------------------------------------------------
 # Topic 5: Converting Lists/Tuples to Sets
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Create a list called skills_list with:
 # "JavaScript", "React", "Python", "React", "JavaScript", "Node.js"
 skills_list = ["JavaScript", "React", "Python", "React", "JavaScript", "Node.js"]
@@ -218,6 +223,7 @@ print(f"Final converted List: {unique_skills_list}")
 
 # ---------------------------------------------------------------------
 # Topic 6: Core Set Operations
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a set called frontend_required with:
 # "HTML", "CSS", "JavaScript", "React"
 frontend_required = {"HTML", "CSS", "JavaScript", "React"}
@@ -264,6 +270,7 @@ print(f"Not shared skills: {not_shared_skills}")
 
 # ---------------------------------------------------------------------
 # Topic 7: Set Relationship Checks
+print(f"{"-" * 30}Topic 7{"-" * 30}")
 # 1. Create a set called required_skills with:
 # "JavaScript", "React", "Node.js"
 required_skills = {"JavaScript", "React", "Node.js"}

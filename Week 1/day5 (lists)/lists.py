@@ -1,5 +1,5 @@
-# Exercise 1: Creating lists and checking length
-
+# Topic 1: Creating lists and checking length
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create an empty list called empty_list
 empty_list = []
 
@@ -38,7 +38,8 @@ print(mixed_data_types)
 print(len(mixed_data_types))
 
 # ---------------------------------------------------------------------
-# Exercise 2: Indexing, negative indexing, and slicing lists
+# Topic 2: Indexing, negative indexing, and slicing lists
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Print the first item from skills
 print(skills[0])
 
@@ -76,7 +77,8 @@ print(mixed_data_types[0])
 print(mixed_data_types[-1])
 
 # ---------------------------------------------------------------------
-# Exercise 3: Checking items and modifying list items
+# Topic 3: Checking items and modifying list items
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 # 1. Check whether "Python" exists in skills and store the result in has_python
 has_python = "Python" in skills
 
@@ -120,7 +122,8 @@ has_city = "Lewisville" in mixed_data_types
 print(has_city)
 
 # ---------------------------------------------------------------------
-# Exercise 4: Adding items with append(), insert(), and extend()
+# Topic 4: Adding items with append(), insert(), and extend()
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Add "AWS" to the end of skills using append()
 skills.append("AWS")
 
@@ -172,7 +175,8 @@ print(len(skills))
 print(len(cities))
 
 # ---------------------------------------------------------------------
-# Exercise 5: Removing items with remove(), pop(), del, and clear()
+# Topic 5: Removing items with remove(), pop(), del, and clear()
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Remove "AWS" from skills using remove()
 skills.remove("AWS")
 
@@ -232,7 +236,8 @@ print(temporary_items)
 print(len(temporary_items))
 
 # ---------------------------------------------------------------------
-# Exercise 6: Copying and joining lists
+# Topic 6: Copying and joining lists
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a copy of skills called skills_copy using copy()
 skills_copy = skills.copy()
 
@@ -287,7 +292,8 @@ print(backend_skills_v2)
 print(len(full_stack_skills))
 
 # ---------------------------------------------------------------------
-# Exercise 7: count(), index(), reverse(), sort(), and sorted()
+# Topic 7: count(), index(), reverse(), sort(), and sorted()
+print(f"{"-" * 30}Topic 7{"-" * 30}")
 # 1. Count how many times "PostgreSQL" appears in skills and store it in postgres_count
 postgres_count = skills.count("PostgreSQL")
 

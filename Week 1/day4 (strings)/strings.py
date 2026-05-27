@@ -1,4 +1,5 @@
-# Exercise 1: Creating Strings
+# Topic 1: Creating Strings
+print(f"{'-' * 30}Topic 1{'-' * 30}")
 # 1. Create a variable called first_name and store your first name as a string
 first_name = "Sudharsan"
 
@@ -56,8 +57,8 @@ print(len(first_name))
 print(len(language))
 
 # ---------------------------------------------------------------------
-# Exercise 2: Concatenation, Repetition, Escape Characters
-
+# Topic 2: Concatenation, Repetition, Escape Characters
+print(f"{'-' * 30}Topic 2{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -122,8 +123,8 @@ print(escaped_quote)
 
 
 # ---------------------------------------------------------------------
-# Exercise 3: String Formatting
-
+# Topic 3: String Formatting
+print(f"{'-' * 30}Topic 3{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -181,8 +182,8 @@ Language: {language}"""
 print(summary)
 
 # ---------------------------------------------------------------------
-# Exercise 4: String Indexing
-
+# Topic 4: String Indexing
+print(f"{'-' * 30}Topic 4{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -233,8 +234,8 @@ print(full_name[last_index])
 print(full_name[-1])
 
 # ---------------------------------------------------------------------
-# Exercise 5: String Slicing
-
+# Topic 5: String Slicing
+print(f"{'-' * 30}Topic 5{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -291,8 +292,8 @@ print(full_name_last_part)
 print(language[:])
 
 # ---------------------------------------------------------------------
-# Exercise 6: String Methods - Case, Strip, Replace
-
+# Topic 6: String Methods - Case, Strip, Replace
+print(f"{'-' * 30}Topic 6{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -351,8 +352,8 @@ uppercase_city = city.upper()
 print(uppercase_city)
 
 # ---------------------------------------------------------------------
-# Exercise 7: String Search and Check Methods
-
+# Topic 7: String Search and Check Methods
+print(f"{'-' * 30}Topic 7{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -405,8 +406,8 @@ print(full_name.startswith(first_name))
 print(full_name.endswith(last_name))
 
 # ---------------------------------------------------------------------
-# Exercise 8: split() and join()
-
+# Topic 8: split() and join()
+print(f"{'-' * 30}Topic 8{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
@@ -464,8 +465,8 @@ joined_letters = "-".join(name_letters)
 print(joined_letters)
 
 # ---------------------------------------------------------------------
-# Exercise 9: Character Check Methods
-
+# Topic 9: Character Check Methods
+print(f"{'-' * 30}Topic 9{'-' * 30}")
 # Existing variables available:
 # first_name
 # last_name
