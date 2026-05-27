@@ -19,6 +19,7 @@ range()
 range(start, stop, step)
 counting forward and backward
 range(len(...)) for index-based loops
+enumerate() for index + value loops
 looping through dictionary keys
 looping through dictionary values
 looping through dictionary items
@@ -243,7 +244,30 @@ Output:
 
 This works because `range(len(tasks))` produces valid list indexes.
 
-## 8. Looping through dictionaries
+## 8. Using `enumerate()` for index + value
+
+When both the index and the item are needed, `enumerate()` is usually cleaner than `range(len(...))`.
+
+```python
+topics = ["Dictionaries", "Conditionals", "Loops"]
+
+for index, topic in enumerate(topics):
+    print(f"{index}: {topic}")
+
+Output:
+
+```text
+0: Dictionaries
+1: Conditionals
+2: Loops
+```
+
+Mental model:
+
+dict.items()    -> key + value
+enumerate(list) -> index + item
+
+## 9. Looping through dictionaries
 
 By default, looping over a dictionary gives keys.
 
@@ -282,7 +306,7 @@ The thing after `in` controls what Python loops through.
 The variable name does not control behavior.
 ```
 
-## 9. `.values()` and `.items()`
+## 10. `.values()` and `.items()`
 
 Use `.values()` when only values are needed.
 
@@ -315,7 +339,7 @@ for key, value in profile.items():
 
 Python's `.items()` is similar to JavaScript's `Object.entries()`.
 
-## 10. `while` loops
+## 11. `while` loops
 
 A `while` loop runs as long as a condition is true.
 
@@ -353,7 +377,7 @@ Every while loop needs something inside it that can eventually make the conditio
 
 Without an update, the loop may become infinite.
 
-## 11. `for` vs `while`
+## 12. `for` vs `while`
 
 Use `for` when looping through known items or known counts.
 
@@ -381,7 +405,7 @@ while loop -> repeat while a condition is true
 
 Do not overuse `while`. If there is a list, string, dictionary, or `range()`, a `for` loop is usually cleaner.
 
-## 12. `break`
+## 13. `break`
 
 `break` stops the whole loop immediately.
 
@@ -405,7 +429,7 @@ Found Python - stopping loop
 
 After `break`, the loop does not continue to the remaining items.
 
-## 13. `continue`
+## 14. `continue`
 
 `continue` skips the current loop run and moves to the next one.
 
@@ -433,7 +457,7 @@ break    -> stop the whole loop
 continue -> skip this one run and keep looping
 ```
 
-## 14. `continue` inside `while` loops
+## 15. `continue` inside `while` loops
 
 Be careful with `continue` in `while` loops. If `continue` skips the counter update, the loop can become infinite.
 
@@ -470,7 +494,7 @@ Rule:
 In while loops, update the counter before continue if continue would skip the normal update.
 ```
 
-## 15. Loop `else`
+## 16. Loop `else`
 
 Python loops can have an `else` block.
 
@@ -517,7 +541,7 @@ Loop completed normally -> else runs
 Loop stopped by break   -> else does not run
 ```
 
-## 16. Nested loops
+## 17. Nested loops
 
 A nested loop is a loop inside another loop.
 
@@ -550,7 +574,7 @@ If the outer list has 3 items and the inner list has 2 items, the body runs `3 x
 
 Nested loops multiply work. They are fine for small examples, but careless nested loops over large data can get slow.
 
-## 17. Nested loops with dictionaries
+## 18. Nested loops with dictionaries
 
 A common pattern is a dictionary where each key points to a list.
 
@@ -590,6 +614,8 @@ using range(start, stop)
 using range(start, stop, step)
 counting backward with range()
 using range(len(...)) for indexes
+using enumerate() for index + value loops
+using enumerate(..., start=1) for human-friendly numbering
 looping through dictionary keys
 looping through dictionary values
 looping through dictionary items
@@ -612,6 +638,7 @@ using nested loops with lists, ranges, and dictionaries
 | Initial terminal run missed `Practice round 3` | Pasted code was correct; rerunning after saving confirmed the correct output. |
 | Repeated generic labels like `---Numbers---` | Not a bug, but more specific labels make longer terminal output easier to scan. |
 | Used `print(day + ":")` | Valid, but `print(f"{day}:")` is more consistent with the project's f-string style. |
+| Initially skipped `enumerate()` during loops | Fixed as a Day 10 addendum. `enumerate()` is the cleaner Python pattern when both index and item are needed. |
 
 ## Final mixed exercise status
 
@@ -658,6 +685,9 @@ Use range(start, stop, step) when a custom step is needed.
 The stop value in range() is excluded.
 Use a negative step to count backward.
 Use range(len(list_name)) when indexes are needed.
+Use enumerate(list_name) when both index and item are needed.
+Use enumerate(list_name, start=1) for human-friendly numbering.
+Prefer enumerate() over range(len(...)) when you need both index and value.
 Use while loops when repeating while a condition is true.
 Every while loop needs a condition that can eventually become false.
 Use += 1 to increment counters.

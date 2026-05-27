@@ -272,6 +272,9 @@ Use range() when looping through numbers/counts.
 Remember the stop value in range() is excluded.
 Use a negative step to count backward with range().
 Use range(len(list_name)) only when indexes are needed.
+Use enumerate(list_name) when both index and item are needed.
+Use enumerate(list_name, start=1) for human-friendly numbering.
+Prefer enumerate() over range(len(...)) when you need both index and value.
 Dictionaries loop through keys by default.
 Use .values() for dictionary values.
 Use .items() for dictionary key-value pairs.
@@ -583,6 +586,8 @@ The object after in controls behavior, not the loop variable name.
 range() excludes the stop value.
 Use negative step values to count backward.
 Use range(len(...)) when indexes are actually needed.
+Use enumerate(...) when both index and item are needed.
+Use enumerate(..., start=1) for human-friendly numbering.
 break stops the whole loop.
 continue skips only the current loop run.
 In while loops, update counters before continue when needed.
