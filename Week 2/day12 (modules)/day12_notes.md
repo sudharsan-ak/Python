@@ -415,5 +415,5 @@ If output shows None, check whether a function printed instead of returned, and 
 ## Ready for next day
 
 ```text
-Day 13 - List Comprehension
+Day 13 - Comprehension
 ```

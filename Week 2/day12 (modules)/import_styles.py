@@ -1,4 +1,5 @@
 # Topic 2: Specific imports, multiple imports, and aliases
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Import only get_student_name from helpers
 from helpers import get_student_name
 

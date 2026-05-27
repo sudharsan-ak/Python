@@ -1,5 +1,6 @@
 # ---------------------------------------------------------------------
 # Topic 1 Exercise: Basic for loops with strings and lists
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create a list called languages with:
 # "JavaScript", "Python", "TypeScript", "React"
 languages = ["JavaScript", "Python", "TypeScript", "React"]
@@ -50,6 +51,7 @@ for score in scores:
 
 # ---------------------------------------------------------------------
 # Topic 2 Exercise: range() and counting loops
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Use range() to print numbers from 0 to 4
 for number in range(5):
     print(number)
@@ -102,6 +104,7 @@ for number in range(3):
 
 # ---------------------------------------------------------------------
 # Topic 3 Exercise: Looping through dictionaries
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 
 # 1. Create a dictionary called developer_profile with:
 # "name" -> "Sudharsan"
@@ -182,6 +185,7 @@ for key, value in course_progress.items():
 
 # ---------------------------------------------------------------------
 # Topic 4 Exercise: while loops
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Create a variable called count and set it to 1
 count = 1
 
@@ -258,6 +262,7 @@ while is_practicing:
 
 # ---------------------------------------------------------------------
 # Topic 5 Exercise: break and continue
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Create a list called languages with:
 # "JavaScript", "TypeScript", "Python", "React", "Node.js"
 languages = ["JavaScript", "TypeScript", "Python", "React", "Node.js"]
@@ -330,6 +335,7 @@ while count <= 5:
 
 # ---------------------------------------------------------------------
 # Topic 6 Exercise: loop else
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a list called languages with:
 # "JavaScript", "TypeScript", "React", "Node.js"
 languages = ["JavaScript", "TypeScript", "React", "Node.js"]
@@ -404,6 +410,7 @@ else:
 
 # ---------------------------------------------------------------------
 # Topic 7 Exercise: Nested loops
+print(f"{"-" * 30}Topic 7{"-" * 30}")
 # 1. Create a list called frontend_skills with:
 # "HTML", "CSS", "React"
 frontend_skills = ["HTML", "CSS", "React"]

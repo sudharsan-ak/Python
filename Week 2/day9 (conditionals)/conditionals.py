@@ -1,5 +1,6 @@
 # ---------------------------------------------------------------------
 # Topic 1: if, indentation, and comparison conditions
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create a variable called age and set it to your age
 age = 30
 
@@ -45,6 +46,7 @@ if completed_day_8:
 
 # ---------------------------------------------------------------------
 # Topic 2: if / else and user input basics
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Create a variable called user_age and set it to 16
 user_age = 16
 
@@ -100,6 +102,7 @@ else:
 
 # ---------------------------------------------------------------------
 # Topic 3: if / elif / else
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 # 1. Create a variable called final_score and set it to 92
 final_score = 92
 
@@ -172,6 +175,7 @@ else:
 
 # ---------------------------------------------------------------------
 # Topic 4: logical conditions with and / or
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Create a variable called applicant_age and set it to 25
 applicant_age = 25
 
@@ -247,6 +251,7 @@ else:
 
 # ---------------------------------------------------------------------
 # Topic 5: nested conditionals vs cleaner logical conditions
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Create a variable called customer_age and set it to 22
 customer_age = 22
 
@@ -341,6 +346,7 @@ else:
 
 # ---------------------------------------------------------------------
 # Topic 6: truthy/falsy values with strings, lists, and dictionaries
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a variable called username and set it to an empty string
 username = ""
 
@@ -435,6 +441,7 @@ else:
 
 # ---------------------------------------------------------------------
 # Topic 7: short-hand conditionals
+print(f"{"-" * 30}Topic 7{"-" * 30}")
 # 1. Create a variable called age and set it to 21
 age = 21
 

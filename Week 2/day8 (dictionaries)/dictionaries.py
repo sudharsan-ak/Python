@@ -1,4 +1,5 @@
 # Topic 1: Dictionary Basics
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create a dictionary called profile with these key-value pairs:
 # "first_name" -> your first name
 # "last_name" -> your last name
@@ -48,6 +49,7 @@ print(f"Length of Developer Profile: {len(developer_profile)}")
 
 # ---------------------------------------------------------------------
 # Topic 2: Accessing Values Safely
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 # 1. Print the first_name from profile using square bracket access
 print(f"First name: {profile['first_name']}")
 
@@ -97,6 +99,7 @@ print(f"Current company: {current_company}")
 
 # ---------------------------------------------------------------------
 # Topic 3: Adding and Updating Dictionary Data
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 # 1. Add a new key called "country" to profile with the value "USA"
 profile["country"] = "USA"
 
@@ -143,6 +146,7 @@ print(f"Developer Profile Length after Update : {len(developer_profile)}")
 
 # ---------------------------------------------------------------------
 # Topic 4: Removing Dictionary Items
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Remove "favorite_language" from profile using pop()
 # Store the removed value in removed_favorite_language
 removed_favorite_language = profile.pop("favorite_language")
@@ -200,6 +204,7 @@ print(f"Temporary profile after clear: {temporary_profile}")
 
 # ---------------------------------------------------------------------
 # Topic 5: Dictionary Views - keys(), values(), items()
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Store all keys from profile in a variable called profile_keys
 profile_keys = profile.keys()
 
@@ -243,6 +248,7 @@ print(f"Developer profile items: {developer_profile_items}")
 
 # ---------------------------------------------------------------------
 # Topic 6: Copying Dictionaries
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a copy of profile using copy()
 # Store it in profile_copy
 profile_copy = profile.copy()
@@ -290,6 +296,7 @@ print(f"Original Developer profile after copy updates: {developer_profile}")
 
 # ---------------------------------------------------------------------
 # Topic 7: Nested Dictionaries
+print(f"{"-" * 30}Topic 7{"-" * 30}")
 # 1. Create a dictionary called learning_profile with:
 # "student_name" -> your name
 # "current_day" -> 8

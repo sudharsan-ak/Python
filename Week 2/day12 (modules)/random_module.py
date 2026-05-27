@@ -1,4 +1,5 @@
 # Day 12 - Topic 4: Built-in random module
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 # 1. Import the random module
 import random
 

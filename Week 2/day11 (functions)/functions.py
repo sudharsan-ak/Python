@@ -1,5 +1,6 @@
 # ---------------------------------------------------------------------
 # Topic 1 Exercise: Function Basics
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Create a function called welcome_message
 # It should print: Welcome to Day 11 - Functions
 def welcome_message():
@@ -50,6 +51,7 @@ show_completion_message()
 
 # ---------------------------------------------------------------------
 # Topic 2 Exercise: print() vs return
+print(f"{"-" * 30}Topic 2{"-" * 30}")
 
 # 1. Create a function called print_day_status
 # It should print: Day 11 is in progress
@@ -135,6 +137,7 @@ print(return_test)
 
 # ---------------------------------------------------------------------
 # Topic 3 Exercise: Parameters and Arguments
+print(f"{"-" * 30}Topic 3{"-" * 30}")
 
 # 1. Create a function called greet_student
 # It should accept one parameter called name
@@ -231,6 +234,7 @@ print(f"Passing score: {has_passing_score}")
 
 # ---------------------------------------------------------------------
 # Topic 4 Exercise: Keyword Arguments and Default Parameters
+print(f"{"-" * 30}Topic 4{"-" * 30}")
 
 # 1. Create a function called show_student_profile
 # It should accept two parameters: name and role
@@ -328,6 +332,7 @@ show_day_summary(day=11, status="Topic 4 practice")
 
 # ---------------------------------------------------------------------
 # Topic 5 Exercise: Arbitrary Arguments / *args
+print(f"{"-" * 30}Topic 5{"-" * 30}")
 # 1. Create a function called show_topics
 # It should accept any number of topics using *topics
 # Inside the function, loop through topics and print each one with this format:
@@ -438,6 +443,7 @@ check_topics("Functions", "Loops")
 
 # ---------------------------------------------------------------------
 # Topic 6 Exercise: Function as a Parameter
+print(f"{"-" * 30}Topic 6{"-" * 30}")
 # 1. Create a function called say_welcome
 # It should print: Welcome to function callbacks
 def say_welcome():

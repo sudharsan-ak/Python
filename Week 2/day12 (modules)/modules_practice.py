@@ -1,4 +1,5 @@
 # Topic 1: Importing a full custom module
+print(f"{"-" * 30}Topic 1{"-" * 30}")
 # 1. Import the full helpers module
 import helpers
 
