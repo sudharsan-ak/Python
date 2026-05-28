@@ -7,13 +7,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 
 ```text
 Week 1 - Cleared
-Day 8 - Cleared
-Day 9 - Cleared
-Day 10 - Cleared
-Day 11 - Cleared
-Day 12 - Cleared
-Day 13 - Cleared
-Next: Day 14 - Higher Order Functions
+Week 2 - Cleared
+Next: Day 15 - Python Type Errors
 ```
 
 ## Detailed status
@@ -32,12 +27,13 @@ Day 10 - Cleared
 Day 11 - Cleared
 Day 12 - Cleared
 Day 13 - Cleared
-Next: Day 14 - Higher Order Functions
+Day 14 - Cleared
+Next: Day 15 - Python Type Errors
 ```
 
 ## Current Project Sources structure
 
-Current preferred source structure after Day 13:
+Current preferred source structure after Week 2 consolidation:
 
 ```text
 README.md
@@ -47,12 +43,7 @@ python_rules.md
 mistakes_log.md
 learning_index_part1.md
 week1_notes.md
-day8_notes.md
-day9_notes.md
-day10_notes.md
-day11_notes.md
-day12_notes.md
-day13_notes.md
+week2_notes.md
 ```
 
 Optional transition file:
@@ -61,9 +52,9 @@ Optional transition file:
 learning_index.md
 ```
 
-If `learning_index.md` still exists in Project Sources, replace it with the deprecation stub from the zip or remove it if possible. Do not keep the old bloated version.
+If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 14
+## Files to read before starting Day 15
 
 ```text
 README.md
@@ -73,53 +64,35 @@ python_rules.md
 mistakes_log.md
 learning_index_part1.md
 week1_notes.md
-day8_notes.md
-day9_notes.md
-day10_notes.md
-day11_notes.md
-day12_notes.md
-day13_notes.md
+week2_notes.md
 ```
 
 ## Active week status
 
 ```text
-Week 2 - In progress
-Completed: Day 8 through Day 13
-Remaining: Day 14
-```
-
-Current Week 2 notes:
-
-```text
-day8_notes.md
-day9_notes.md
-day10_notes.md
-day11_notes.md
-day12_notes.md
-day13_notes.md
+Week 3 - Not started
+Completed: Week 1 and Week 2
+Next: Day 15
 ```
 
 ## Next day
 
 ```text
-Day 14 - Higher Order Functions
+Day 15 - Python Type Errors
 ```
 
-Expected Day 14 focus:
+Expected Day 15 focus:
 
 ```text
-what higher order functions are
-functions as values
-passing functions as arguments
-callbacks
-lambda in detail
-map()
-filter()
-reduce()
-sorting with key functions
-small anonymous functions
-when to use lambda vs def
+what type errors are
+common beginner type errors
+unsupported operations between types
+string + number issues
+list/string/dictionary misuse
+NoneType errors
+function return value mistakes
+reading tracebacks
+fixing errors step by step
 final mixed exercise
 ```
 
@@ -136,21 +109,25 @@ generator functions
 yield
 ```
 
-## Pending cleanup after Day 14
+## Pending cleanup after Week 2
 
-After Day 14 is cleared:
+After uploading `week2_notes.md`:
 
 ```text
-Generate day14_notes.md.
-Generate week2_notes.md.
-Finalize learning_index_part1.md for Weeks 1-2.
-Update current_status.md for Day 15 / Week 3.
-Consider creating learning_index_part2.md for Weeks 3-4.
 Remove day8_notes.md through day14_notes.md from Project Sources if possible.
+Keep week2_notes.md as the consolidated Week 2 study note.
+Keep day14_notes.md only as a local/downloadable standalone reference if desired.
+```
+
+Before or during Day 15:
+
+```text
+Consider creating learning_index_part2.md for Weeks 3-4.
+Do not create it unless we decide it is needed for the active Week 3 workflow.
 ```
 
 ## Current confidence level
 
 ```text
-Ready for Day 14 - Higher Order Functions
+Ready for Day 15 - Python Type Errors
 ```

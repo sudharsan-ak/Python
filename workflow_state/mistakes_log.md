@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 13
-Next update: after Day 14, before Week 2 consolidation
+Current scope: Day 1 through Day 14
+Next update: after Day 15, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -86,6 +86,22 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | Tuple comprehension misconception | `(x for x in items)` is a generator expression, not a tuple |
 | Generator consumption | Once a generator is consumed, converting/looping again may produce no values |
 | Lambda overuse | Use `lambda` only for tiny one-expression temporary functions; use `def` for real logic |
+| Passing function call instead of function | Use `function_name` when passing a function; `function_name()` calls it immediately |
+| Lambda return keyword mistake | Lambda automatically returns its expression; do not write `return` inside lambda |
+| Lambda overuse in real logic | Use `def` when logic is named, reused, multi-step, or likely to grow |
+| map/filter lazy object confusion | `map()` and `filter()` return lazy objects; consume with `list()`, `tuple()`, or `set()` when needed |
+| map vs filter mix-up | `map()` transforms every item; `filter()` keeps/removes items |
+| Generator expression vs list comprehension | `list((x for x in items))` consumes a generator; `[x for x in items]` is the actual list comprehension |
+| Python import order confusion | Use `from functools import reduce`, not JavaScript-style `import reduce from functools` |
+| reduce output confusion | `reduce()` returns one final value directly; do not wrap it with `list()` |
+| reduce overuse | Prefer `sum()`, `max()`, `min()`, `join()`, or a normal loop when clearer |
+| reduce accumulator naming | Reducer functions should clearly separate `accumulator` from the current item |
+| Floating-point display surprise | Decimal totals may display precision artifacts; use formatting like `{value:.2f}` for display |
+| sorted key function call mistake | Use `key=function_name`, not `key=function_name()` |
+| Python sort vs JavaScript sort confusion | Python `key` extracts one value per item; JavaScript comparator compares two items |
+| `.sort()` return trap | `.sort()` mutates the list and returns `None`; use `sorted()` for a new list |
+| Extra output bloat | If the prompt asks for one print, avoid adding extra debug-style output unless useful |
+| Small typo in required variable names | Typos like `toal_score` can work if used consistently but still violate prompt-specific naming |
 
 ---
 
@@ -103,6 +119,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log created after Day 13.
-Ready to keep using during Day 14 - Higher Order Functions.
+Mistakes log updated through Day 14.
+Ready to keep using during Day 15 - Python Type Errors.
 ```

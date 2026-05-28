@@ -165,6 +165,39 @@ Use tuple(generator_expression) or tuple(existing_iterable) to create a tuple.
 Generators are lazy and can be consumed once.
 Lambda is a small one-expression anonymous function.
 Use lambda lightly for tiny temporary functions; use def for named or complex logic.
+Functions are first-class values in Python.
+A higher order function can accept another function as an argument or return a function.
+A callback is a function passed into another function so it can be called later.
+Store or pass a function using function_name without parentheses.
+Call a function immediately using function_name().
+Lambda creates a tiny anonymous one-expression function.
+Lambda syntax is lambda parameter: expression.
+Do not use return inside lambda.
+Use lambda for tiny temporary one-expression logic.
+Use def for named, reusable, multi-step, complex, or growing logic.
+map(function, iterable) transforms each item and returns a lazy map object.
+filter(function, iterable) keeps only items where the function returns True and returns a lazy filter object.
+Use list(), tuple(), or set() to consume map() and filter() results when a concrete collection is needed.
+map() is for transformation; filter() is for keeping/removing items.
+A list comprehension is often cleaner than map() or filter() with a simple lambda.
+Import reduce using from functools import reduce.
+Python does not use JavaScript-style import syntax like import reduce from functools.
+reduce(function, iterable) reduces many values into one final value.
+reduce(function, iterable, initial_value) starts the accumulator with an explicit initial value.
+Reducer functions should accept accumulator and current item parameters.
+reduce() returns the final value directly; do not wrap reduce() with list().
+Prefer sum(), max(), min(), join(), or a normal loop when clearer than reduce().
+sorted(iterable) returns a new sorted list.
+list.sort() mutates the original list and returns None.
+Use key= to tell sorted() or .sort() what value to sort by.
+Use key=function_name, not key=function_name().
+Use key=len to sort strings by length.
+Use key=lambda item: item["field"] to sort dictionaries by a simple field.
+Use a named def key function when sorting logic deserves a name or may grow.
+Use reverse=True to sort descending.
+A tuple key like (item["score"], item["name"]) sorts by the first value, then the second value.
+Python sorting key functions extract one sorting value per item; JavaScript sort callbacks compare two items.
+Floating-point totals may display tiny precision artifacts; format output with :.2f when clean decimal display is needed.
 ```
 
 ---
