@@ -198,6 +198,26 @@ Use reverse=True to sort descending.
 A tuple key like (item["score"], item["name"]) sorts by the first value, then the second value.
 Python sorting key functions extract one sorting value per item; JavaScript sort callbacks compare two items.
 Floating-point totals may display tiny precision artifacts; format output with :.2f when clean decimal display is needed.
+A TypeError usually means the operation is valid in general, but the given value types do not work together.
+Read the last line of a traceback first to identify the error type and message.
+Use the traceback line number to find the exact line that crashed.
+Use type() to inspect values when a type-related error is unclear.
+Choose type conversions based on intent: f-string/str() for display, int()/float() for numeric math.
+Do not fix type errors by blindly converting everything to strings.
+List and string indexes must be integers or slices, not arbitrary string labels.
+Dictionaries use keys for access; lists and strings use numeric indexes.
+Use square brackets for dictionary/list/string access; parentheses call functions.
+A missing dictionary key usually causes KeyError, not TypeError.
+Use get("key", fallback) when a dictionary key may be missing and later code expects a usable value.
+Calling a method on None usually means a value was missing, a function forgot to return, or a mutating method returned None.
+Remember append() mutates the list and returns None.
+Remember sort() mutates the list and returns None.
+Use sorted() when you need a new sorted list.
+Use return when a function result must be reused by later code.
+isinstance(value, type_name) checks whether a value belongs to a type and returns True or False.
+Use isinstance(value, str) when mixed data requires checking whether a value is a string before converting it.
+Prefer a normal for loop over a complex comprehension when debugging mixed-type data.
+When debugging, fix the root cause of the bad value instead of only changing the crashed line.
 ```
 
 ---

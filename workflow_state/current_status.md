@@ -8,7 +8,9 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ```text
 Week 1 - Cleared
 Week 2 - Cleared
-Next: Day 15 - Python Type Errors
+Week 3 - In progress
+Completed through: Day 15 - Python Type Errors
+Next: Day 16 - Python Date Time
 ```
 
 ## Detailed status
@@ -28,12 +30,13 @@ Day 11 - Cleared
 Day 12 - Cleared
 Day 13 - Cleared
 Day 14 - Cleared
-Next: Day 15 - Python Type Errors
+Day 15 - Cleared
+Next: Day 16 - Python Date Time
 ```
 
 ## Current Project Sources structure
 
-Current preferred source structure after Week 2 consolidation:
+Current preferred source structure during active Week 3:
 
 ```text
 README.md
@@ -42,8 +45,10 @@ project_rules.md
 python_rules.md
 mistakes_log.md
 learning_index_part1.md
+learning_index_part2.md
 week1_notes.md
 week2_notes.md
+day15_notes.md
 ```
 
 Optional transition file:
@@ -54,7 +59,7 @@ learning_index.md
 
 If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 15
+## Files to read before starting Day 16
 
 ```text
 README.md
@@ -63,37 +68,40 @@ project_rules.md
 python_rules.md
 mistakes_log.md
 learning_index_part1.md
+learning_index_part2.md
 week1_notes.md
 week2_notes.md
+day15_notes.md
 ```
 
 ## Active week status
 
 ```text
-Week 3 - Not started
-Completed: Week 1 and Week 2
-Next: Day 15
+Week 3 - In progress
+Completed: Day 15
+Next: Day 16
 ```
 
 ## Next day
 
 ```text
-Day 15 - Python Type Errors
+Day 16 - Python Date Time
 ```
 
-Expected Day 15 focus:
+Expected Day 16 focus:
 
 ```text
-what type errors are
-common beginner type errors
-unsupported operations between types
-string + number issues
-list/string/dictionary misuse
-NoneType errors
-function return value mistakes
-reading tracebacks
-fixing errors step by step
-final mixed exercise
+Python datetime module
+current date and time
+date objects
+time objects
+datetime objects
+formatting dates with strftime
+parsing date strings when appropriate
+timedelta basics
+difference between dates/times
+practical examples without over-bloating
+focused final mixed exercise
 ```
 
 Later addendum reminder:
@@ -109,25 +117,9 @@ generator functions
 yield
 ```
 
-## Pending cleanup after Week 2
-
-After uploading `week2_notes.md`:
-
-```text
-Remove day8_notes.md through day14_notes.md from Project Sources if possible.
-Keep week2_notes.md as the consolidated Week 2 study note.
-Keep day14_notes.md only as a local/downloadable standalone reference if desired.
-```
-
-Before or during Day 15:
-
-```text
-Consider creating learning_index_part2.md for Weeks 3-4.
-Do not create it unless we decide it is needed for the active Week 3 workflow.
-```
 
 ## Current confidence level
 
 ```text
-Ready for Day 15 - Python Type Errors
+Ready for Day 16 - Python Date Time
 ```

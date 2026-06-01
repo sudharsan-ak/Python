@@ -62,6 +62,7 @@ Do not over-combine big concepts.
 End each day with a focused mixed final exercise.
 Avoid overly long final exercises; keep them focused instead of 35+ item checklists.
 Use fresh examples/scenarios in final mixed exercises instead of repeating exact topic-exercise examples.
+Prefer realistic, fresh final-exercise scenarios over repeatedly using student/course/Python-learning tracker scenarios, unless the topic specifically needs that framing.
 For topic starter snippets, include a separator print statement under the topic header.
 Vary 2-3 exercise tasks slightly from teaching examples so practice is not pure copying.
 ```

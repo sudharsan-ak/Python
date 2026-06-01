@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 14
-Next update: after Day 15, if new reusable mistakes are found
+Current scope: Day 1 through Day 15
+Next update: after Day 16, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -102,6 +102,16 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | `.sort()` return trap | `.sort()` mutates the list and returns `None`; use `sorted()` for a new list |
 | Extra output bloat | If the prompt asks for one print, avoid adding extra debug-style output unless useful |
 | Small typo in required variable names | Typos like `toal_score` can work if used consistently but still violate prompt-specific naming |
+| TypeError panic debugging | Read the traceback first; do not randomly change code before finding the exact crashed line |
+| Type conversion without intent | Use f-string/str() for display, but int()/float() for real numeric math |
+| List/string/dict access mismatch | Lists and strings use numeric indexes; dictionaries use keys |
+| Calling dictionaries/lists like functions | `profile("name")` and `skills(0)` are calls; use square brackets for access |
+| Missing dictionary key vs wrong type | Missing dict keys usually cause KeyError; wrong index type on list/string usually causes TypeError |
+| NoneType method call | If `.upper()` or another method is called on None, trace where None came from first |
+| Dictionary get() without fallback | `dict.get("missing")` returns None; provide a fallback if later code expects a real value |
+| append()/sort() return misunderstanding | These mutate the list and return None; do not assign them when expecting a new list |
+| Blind string conversion | Converting everything to str() can make code run but still produce wrong logic like "855" instead of 90 |
+| isinstance() introduced | Use `isinstance(value, str)` to check mixed data before converting, but prefer a loop when it is clearer |
 
 ---
 
@@ -119,6 +129,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log updated through Day 14.
-Ready to keep using during Day 15 - Python Type Errors.
+Mistakes log updated through Day 15.
+Ready to keep using during Day 16 - Python Date Time.
 ```
