@@ -218,6 +218,29 @@ isinstance(value, type_name) checks whether a value belongs to a type and return
 Use isinstance(value, str) when mixed data requires checking whether a value is a string before converting it.
 Prefer a normal for loop over a complex comprehension when debugging mixed-type data.
 When debugging, fix the root cause of the bad value instead of only changing the crashed line.
+Use datetime.datetime.now() after import datetime.
+Use datetime.now() after from datetime import datetime.
+Do not name Python files after the built-in datetime module, such as datetime.py.
+date(year, month, day) creates a date object.
+time(hour, minute, second) creates a time object.
+datetime(year, month, day, hour, minute, second) creates a datetime object.
+Use datetime attributes like .year, .month, .day, .hour, .minute, and .second without parentheses.
+Use datetime methods like .date() and .time() with parentheses.
+Use strftime() to format date/time objects into strings.
+Use strptime() to parse strings into datetime objects.
+The strptime() format string must match the input string exactly.
+Use %H for 24-hour input such as 18:30.
+Use %I with %p for 12-hour AM/PM input such as 06:30 PM.
+Use timedelta for date/time duration math.
+datetime + timedelta gives a future datetime.
+datetime - timedelta gives a past datetime.
+datetime - datetime gives a timedelta duration.
+date - date gives a timedelta duration.
+Use timedelta.days for the whole day part of a duration.
+Use timedelta.total_seconds() when the full duration in seconds is needed.
+Do not assume timedelta.seconds means total seconds; it is only the leftover seconds after days are counted.
+Avoid subtracting plain time objects directly when date context matters; use datetime objects for duration calculations.
+datetime.combine(date_object, time_object) can combine separate date and time objects into one datetime object when needed.
 ```
 
 ---

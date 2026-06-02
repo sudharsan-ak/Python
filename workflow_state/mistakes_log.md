@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 15
-Next update: after Day 16, if new reusable mistakes are found
+Current scope: Day 1 through Day 16
+Next update: after Day 17, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -112,6 +112,14 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | append()/sort() return misunderstanding | These mutate the list and return None; do not assign them when expecting a new list |
 | Blind string conversion | Converting everything to str() can make code run but still produce wrong logic like "855" instead of 90 |
 | isinstance() introduced | Use `isinstance(value, str)` to check mixed data before converting, but prefer a loop when it is clearer |
+| datetime import style confusion | `import datetime` needs `datetime.datetime.now()`; `from datetime import datetime` needs `datetime.now()` |
+| Built-in module filename conflict | Do not name a practice file `datetime.py` because it can shadow the built-in module |
+| datetime attribute vs method confusion | Use `.year` without parentheses, but `.date()` and `.time()` with parentheses |
+| strftime vs strptime mix-up | `strftime()` formats objects into strings; `strptime()` parses strings into datetime objects |
+| strptime format mismatch | The format string must match the input text exactly, including separators and hour style |
+| `%I` vs `%H` parsing issue | Use `%H` for 24-hour/no-AM-PM input; use `%I` with `%p` for 12-hour AM/PM input |
+| timedelta seconds confusion | `.seconds` is leftover seconds after days; use `.total_seconds()` for full duration in seconds |
+| Plain time subtraction trap | Do not subtract plain `time` objects directly when the date is unknown; use `datetime` objects |
 
 ---
 
@@ -129,6 +137,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log updated through Day 15.
-Ready to keep using during Day 16 - Python Date Time.
+Mistakes log updated through Day 16.
+Ready to keep using during Day 17 - Exception Handling.
 ```

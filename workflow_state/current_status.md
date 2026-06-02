@@ -9,8 +9,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Week 1 - Cleared
 Week 2 - Cleared
 Week 3 - In progress
-Completed through: Day 15 - Python Type Errors
-Next: Day 16 - Python Date Time
+Completed through: Day 16 - Python Date Time
+Next: Day 17 - Exception Handling
 ```
 
 ## Detailed status
@@ -31,7 +31,8 @@ Day 12 - Cleared
 Day 13 - Cleared
 Day 14 - Cleared
 Day 15 - Cleared
-Next: Day 16 - Python Date Time
+Day 16 - Cleared
+Next: Day 17 - Exception Handling
 ```
 
 ## Current Project Sources structure
@@ -49,6 +50,7 @@ learning_index_part2.md
 week1_notes.md
 week2_notes.md
 day15_notes.md
+day16_notes.md
 ```
 
 Optional transition file:
@@ -59,7 +61,7 @@ learning_index.md
 
 If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 16
+## Files to read before starting Day 17
 
 ```text
 README.md
@@ -72,35 +74,33 @@ learning_index_part2.md
 week1_notes.md
 week2_notes.md
 day15_notes.md
+day16_notes.md
 ```
 
 ## Active week status
 
 ```text
 Week 3 - In progress
-Completed: Day 15
-Next: Day 16
+Completed: Day 15, Day 16
+Next: Day 17
 ```
 
 ## Next day
 
 ```text
-Day 16 - Python Date Time
+Day 17 - Exception Handling
 ```
 
-Expected Day 16 focus:
+Expected Day 17 focus:
 
 ```text
-Python datetime module
-current date and time
-date objects
-time objects
-datetime objects
-formatting dates with strftime
-parsing date strings when appropriate
-timedelta basics
-difference between dates/times
-practical examples without over-bloating
+Exception handling basics
+try / except
+catching specific errors
+else and finally blocks
+error messages and tracebacks
+safe input/conversion patterns
+raising awareness without over-bloating
 focused final mixed exercise
 ```
 
@@ -117,9 +117,8 @@ generator functions
 yield
 ```
 
-
 ## Current confidence level
 
 ```text
-Ready for Day 16 - Python Date Time
+Ready for Day 17 - Exception Handling
 ```

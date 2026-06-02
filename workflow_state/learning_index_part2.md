@@ -11,11 +11,11 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Part 2 covers Week 3 and Week 4.
 Week 3: Day 15 to Day 21 - In progress
 Week 4: Day 22 to Day 28 - Not started
-Current completed through: Day 15
-Next: Day 16 - Python Date Time
+Current completed through: Day 16
+Next: Day 17 - Exception Handling
 ```
 
-This file starts the active Weeks 3-4 archive. Keep it compact. Do not turn it into a notes dump.
+This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into a notes dump.
 
 ---
 
@@ -24,7 +24,8 @@ This file starts the active Weeks 3-4 archive. Keep it compact. Do not turn it i
 | Day | Week day | Topic | Status | Notes file |
 |---|---:|---|---|---|
 | Day 15 | Week 3 Day 1 | Python Type Errors | Cleared | `day15_notes.md` |
-| Day 16 | Week 3 Day 2 | Python Date Time | Next | TBD |
+| Day 16 | Week 3 Day 2 | Python Date Time | Cleared | `day16_notes.md` |
+| Day 17 | Week 3 Day 3 | Exception Handling | Next | TBD |
 
 ---
 
@@ -32,15 +33,16 @@ This file starts the active Weeks 3-4 archive. Keep it compact. Do not turn it i
 
 ```text
 Week 3 - In progress
-Completed: Day 15
-Next: Day 16
+Completed: Day 15, Day 16
+Next: Day 17
 ```
 
 Week 3 currently includes:
 
 ```text
 Day 15 - Python Type Errors: Cleared
-Day 16 - Python Date Time: Next
+Day 16 - Python Date Time: Cleared
+Day 17 - Exception Handling: Next
 ```
 
 ---
@@ -106,29 +108,86 @@ Use isinstance() when mixed data requires type checking.
 Status:
 
 ```text
+Cleared
+```
+
+Notes file:
+
+```text
+day16_notes.md
+```
+
+Covered:
+
+```text
+Python datetime module
+current date and time
+date objects
+time objects
+datetime objects
+extracting datetime attributes
+extracting date-only and time-only parts
+strftime formatting
+strptime parsing
+timedelta basics
+adding/subtracting time
+differences between dates/datetimes
+basic datetime comparisons
+practical mini-scenarios
+focused real-world final mixed exercise
+```
+
+Final exercise scenario:
+
+```text
+Invoice due-date checker
+```
+
+Key reminders:
+
+```text
+After import datetime, use datetime.datetime.now().
+After from datetime import datetime, use datetime.now().
+Do not name files datetime.py.
+Use date(year, month, day), time(hour, minute), and datetime(year, month, day, hour, minute).
+Use strftime() to turn date/time objects into strings.
+Use strptime() to turn strings into datetime objects.
+The strptime() format string must match the input string exactly.
+Use %H for 24-hour input and %I with %p for AM/PM input.
+Use timedelta for duration math.
+Use total_seconds() when the full duration in seconds is needed.
+Avoid subtracting plain time objects directly when date context matters.
+```
+
+---
+
+## Day 17 - Exception Handling
+
+Status:
+
+```text
 Next
 ```
 
 Expected focus:
 
 ```text
-Python datetime module
-current date and time
-date, time, and datetime objects
-strftime formatting
-basic date/time extraction
-basic timedelta usage
+try / except basics
+catching specific exceptions
+else and finally blocks
+safe conversion/input patterns
+reading exception messages
 practical examples
 focused final mixed exercise
 ```
 
-Day 16 should stay paced one topic at a time and avoid turning into a giant date/time reference dump.
+Day 17 should stay paced one topic at a time and should not become a giant exception-reference dump.
 
 ---
 
 ## Current confidence level
 
 ```text
-Day 15 cleared.
-Ready for Day 16 - Python Date Time.
+Day 16 cleared.
+Ready for Day 17 - Exception Handling.
 ```
