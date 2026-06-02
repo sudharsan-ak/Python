@@ -5,35 +5,22 @@ Status: Cleared
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
-## What Day 10 covered
+## Main goal
 
-Day 10 focused on Python loops. The goal was to learn how to repeat work using `for` loops, `while` loops, `range()`, dictionary loops, loop-control tools, loop `else`, and nested loops.
+Day 10 focused on repeating work in Python with `for`, `while`, `range()`, dictionary loops, `enumerate()`, `break`, `continue`, loop `else`, and nested loops.
 
-Topics covered:
+Core idea:
 
 ```text
-for loops
-looping through lists
-looping through strings
-range()
-range(start, stop, step)
-counting forward and backward
-range(len(...)) for index-based loops
-enumerate() for index + value loops
-looping through dictionary keys
-looping through dictionary values
-looping through dictionary items
-while loops
-break
-continue
-loop else
-nested loops
-final mixed exercise
+Conditionals decide whether code runs.
+Loops decide how many times code runs.
 ```
 
-## 1. Basic `for` loops
+---
 
-A `for` loop repeats code once for each item in a sequence.
+# 1. `for` loops
+
+A `for` loop runs once for each item in a sequence.
 
 ```python
 languages = ["JavaScript", "Python", "React"]
@@ -45,74 +32,34 @@ for language in languages:
 Mental model:
 
 ```text
-languages -> the full list
-language  -> one item from the list during each loop run
+languages -> full collection
+language  -> one item during the current loop run
 ```
 
-Use plural names for collections and singular names for each item.
-
-Good:
+Use plural names for collections and singular names for one item.
 
 ```python
 for skill in skills:
     print(skill)
 ```
 
-Bad:
+Avoid confusing names like:
 
 ```python
 for skills in skills:
     print(skills)
 ```
 
-The bad version may run, but the naming is confusing.
-
-JavaScript comparison:
-
-```javascript
-for (const skill of skills) {
-  console.log(skill);
-}
-```
-
-Python:
+Strings can also be looped through character by character.
 
 ```python
-for skill in skills:
-    print(skill)
-```
-
-## 2. Looping through strings
-
-Strings are sequences of characters, so a `for` loop can walk through each character.
-
-```python
-favorite_language = "Python"
-
-for letter in favorite_language:
+for letter in "Python":
     print(letter)
 ```
-
-Output:
-
-```text
-P
-y
-t
-h
-o
-n
-```
-
-Use a clear loop variable like `letter` or `character` when looping through strings.
-
-## 3. Conditionals inside loops
 
 Loops can contain conditionals.
 
 ```python
-languages = ["JavaScript", "Python", "React"]
-
 for language in languages:
     if language == "Python":
         print("Python is part of my learning path")
@@ -120,202 +67,123 @@ for language in languages:
         print(f"{language} is part of my tech stack")
 ```
 
-This combines Day 9 conditionals with Day 10 loops.
+JavaScript comparison:
 
-## 4. `range()` basics
+```text
+JavaScript -> for (const skill of skills) { ... }
+Python     -> for skill in skills:
+```
 
-`range()` creates a sequence of numbers for a loop.
+---
+
+# 2. `range()`
+
+`range()` creates numbers for a loop.
 
 ```python
 for number in range(5):
     print(number)
 ```
 
-Output:
+This prints `0` through `4`.
+
+Important rule:
 
 ```text
-0
-1
-2
-3
-4
+range() includes the start value and excludes the stop value.
 ```
 
-Important:
-
-```text
-range(5) starts at 0 and stops before 5.
-```
-
-## 5. `range(start, stop)`
+Common patterns:
 
 ```python
-for number in range(1, 6):
-    print(number)
+range(5)          # 0, 1, 2, 3, 4
+range(1, 6)       # 1, 2, 3, 4, 5
+range(2, 11, 2)   # 2, 4, 6, 8, 10
+range(5, 0, -1)   # 5, 4, 3, 2, 1
 ```
 
-Output:
-
-```text
-1
-2
-3
-4
-5
-```
-
-Rule:
-
-```text
-start is included
-stop is excluded
-```
-
-This matches the slicing rule learned earlier.
-
-## 6. `range(start, stop, step)`
-
-The third value controls how much the number changes each time.
-
-```python
-for number in range(2, 11, 2):
-    print(number)
-```
-
-Output:
-
-```text
-2
-4
-6
-8
-10
-```
-
-Counting backward uses a negative step.
-
-```python
-for number in range(5, 0, -1):
-    print(number)
-```
-
-Output:
-
-```text
-5
-4
-3
-2
-1
-```
-
-Important:
-
-```text
 If counting backward, the step must be negative.
-range(5, 0) prints nothing because the default step is +1.
+
+JavaScript-style counter loop:
+
+```javascript
+for (let i = 0; i < nums.length; i++) {
+  console.log(nums[i]);
+}
 ```
 
-## 7. Using `range(len(...))` for indexes
-
-Looping directly over items is usually cleaner.
+Python equivalent:
 
 ```python
-tasks = ["Review notes", "Practice loops", "Submit exercise"]
-
-for task in tasks:
-    print(task)
+for i in range(len(nums)):
+    print(nums[i])
 ```
 
-But if the index is needed, use `range(len(...))`.
+Use `range(len(...))` only when indexes are actually needed.
 
-```python
-for index in range(len(tasks)):
-    print(f"{index}: {tasks[index]}")
-```
+---
 
-Output:
+# 3. `enumerate()`
 
-```text
-0: Review notes
-1: Practice loops
-2: Submit exercise
-```
-
-This works because `range(len(tasks))` produces valid list indexes.
-
-## 8. Using `enumerate()` for index + value
-
-When both the index and the item are needed, `enumerate()` is usually cleaner than `range(len(...))`.
+Use `enumerate()` when both the index and item are needed.
 
 ```python
 topics = ["Dictionaries", "Conditionals", "Loops"]
 
 for index, topic in enumerate(topics):
     print(f"{index}: {topic}")
-
-Output:
-
-```text
-0: Dictionaries
-1: Conditionals
-2: Loops
 ```
 
-Mental model:
-
-dict.items()    -> key + value
-enumerate(list) -> index + item
-
-## 9. Looping through dictionaries
-
-By default, looping over a dictionary gives keys.
+Use `start=1` for human-friendly numbering.
 
 ```python
-developer_profile = {
-    "name": "Sudharsan",
-    "role": "Full Stack Software Engineer",
-    "city": "Lewisville"
-}
-
-for key in developer_profile:
-    print(key)
+for index, topic in enumerate(topics, start=1):
+    print(f"{index}. {topic}")
 ```
 
-Output:
+Comparison:
 
 ```text
-name
-role
-city
+dict.items()      -> key + value
+enumerate(list)   -> generated index + item
 ```
-
-Changing the loop variable name does not change behavior.
-
-```python
-for value in developer_profile:
-    print(value)
-```
-
-This still loops through keys. The name `value` is misleading here.
 
 Rule:
 
 ```text
-The thing after `in` controls what Python loops through.
-The variable name does not control behavior.
+Need only item?              for item in items
+Need index + item?           for index, item in enumerate(items)
+Need only/manual index use?  for index in range(len(items))
 ```
 
-## 10. `.values()` and `.items()`
+Prefer `enumerate()` over `range(len(...))` when both index and value are needed.
 
-Use `.values()` when only values are needed.
+---
+
+# 4. Dictionary loops
+
+By default, looping over a dictionary gives keys.
+
+```python
+for key in developer_profile:
+    print(key)
+```
+
+Changing the variable name does not change behavior.
+
+```python
+for value in developer_profile:
+    print(value)  # still keys, not values
+```
+
+Use `.values()` for values.
 
 ```python
 for value in developer_profile.values():
     print(value)
 ```
 
-Use `.items()` when both keys and values are needed.
+Use `.items()` for key-value pairs.
 
 ```python
 for key, value in developer_profile.items():
@@ -324,22 +192,21 @@ for key, value in developer_profile.items():
 
 JavaScript comparison:
 
-```javascript
-for (const [key, value] of Object.entries(profile)) {
-  console.log(`${key}: ${value}`);
-}
+```text
+JavaScript -> Object.entries(profile)
+Python     -> profile.items()
 ```
 
-Python:
+Key rule:
 
-```python
-for key, value in profile.items():
-    print(f"{key}: {value}")
+```text
+The object after `in` controls what Python loops through.
+The variable name after `for` does not control loop behavior.
 ```
 
-Python's `.items()` is similar to JavaScript's `Object.entries()`.
+---
 
-## 11. `while` loops
+# 5. `while` loops
 
 A `while` loop runs as long as a condition is true.
 
@@ -351,131 +218,63 @@ while count <= 5:
     count += 1
 ```
 
-Output:
-
-```text
-1
-2
-3
-4
-5
-```
-
 Important parts:
 
 ```text
-count = 1       -> starting value
-count <= 5      -> condition
-count += 1      -> update so the loop eventually stops
-```
-
-Blunt rule:
-
-```text
-Every while loop needs something inside it that can eventually make the condition false.
+starting value
+condition
+update that eventually makes the condition false
 ```
 
 Without an update, the loop may become infinite.
 
-## 12. `for` vs `while`
-
-Use `for` when looping through known items or known counts.
-
 ```python
-for language in languages:
-    print(language)
-```
+count = 1
 
-Use `while` when repeating until a condition changes.
-
-```python
-attempt = 1
-
-while attempt <= 3:
-    print(f"Attempt {attempt}")
-    attempt += 1
+while count <= 5:
+    print(count)  # bad: count never changes
 ```
 
 Simple guide:
 
 ```text
-for loop   -> known collection or range
-while loop -> repeat while a condition is true
+for loop   -> known collection or count
+while loop -> repeat while condition is true
 ```
 
 Do not overuse `while`. If there is a list, string, dictionary, or `range()`, a `for` loop is usually cleaner.
 
-## 13. `break`
+---
+
+# 6. `break` and `continue`
 
 `break` stops the whole loop immediately.
 
 ```python
-languages = ["JavaScript", "TypeScript", "Python", "React"]
-
 for language in languages:
     if language == "Python":
-        print("Found Python - stopping loop")
+        print("Found Python")
         break
     print(language)
 ```
 
-Output:
-
-```text
-JavaScript
-TypeScript
-Found Python - stopping loop
-```
-
-After `break`, the loop does not continue to the remaining items.
-
-## 14. `continue`
-
 `continue` skips the current loop run and moves to the next one.
 
 ```python
-tools = ["VS Code", "Docker", "Postman", "Git"]
-
 for tool in tools:
     if tool == "Postman":
         continue
     print(tool)
 ```
 
-Output:
-
-```text
-VS Code
-Docker
-Git
-```
-
 Comparison:
 
 ```text
 break    -> stop the whole loop
-continue -> skip this one run and keep looping
+continue -> skip this run and keep looping
 ```
 
-## 15. `continue` inside `while` loops
-
-Be careful with `continue` in `while` loops. If `continue` skips the counter update, the loop can become infinite.
-
-Bad:
-
-```python
-count = 1
-
-while count <= 5:
-    if count == 3:
-        continue
-    print(count)
-    count += 1
-```
-
-When `count` becomes `3`, the loop keeps continuing before `count += 1` runs.
-
-Correct:
+Be careful with `continue` inside `while` loops. If `continue` skips the counter update, the loop can become infinite.
 
 ```python
 count = 1
@@ -494,17 +293,15 @@ Rule:
 In while loops, update the counter before continue if continue would skip the normal update.
 ```
 
-## 16. Loop `else`
+---
 
-Python loops can have an `else` block.
+# 7. Loop `else`
 
 Loop `else` means:
 
 ```text
 Run this only if the loop finished normally without hitting break.
 ```
-
-Example where `else` runs:
 
 ```python
 languages = ["JavaScript", "TypeScript", "React"]
@@ -517,23 +314,6 @@ else:
     print("Python not found")
 ```
 
-Because `break` never happens, the `else` block runs.
-
-Example where `else` does not run:
-
-```python
-languages = ["JavaScript", "Python", "React"]
-
-for language in languages:
-    if language == "Python":
-        print("Python found")
-        break
-else:
-    print("Python not found")
-```
-
-Because `break` happens, the `else` block does not run.
-
 Key takeaway:
 
 ```text
@@ -541,7 +321,11 @@ Loop completed normally -> else runs
 Loop stopped by break   -> else does not run
 ```
 
-## 17. Nested loops
+This works with both `for` and `while` loops.
+
+---
+
+# 8. Nested loops
 
 A nested loop is a loop inside another loop.
 
@@ -554,15 +338,6 @@ for frontend_skill in frontend_skills:
         print(f"{frontend_skill} + {backend_skill}")
 ```
 
-Output:
-
-```text
-HTML + Node.js
-HTML + Python
-CSS + Node.js
-CSS + Python
-```
-
 Mental model:
 
 ```text
@@ -570,81 +345,77 @@ For each outer item,
     run the full inner loop.
 ```
 
-If the outer list has 3 items and the inner list has 2 items, the body runs `3 x 2 = 6` times.
+Nested loops multiply work.
 
-Nested loops multiply work. They are fine for small examples, but careless nested loops over large data can get slow.
+```text
+outer items x inner items = total loop runs
+```
 
-## 18. Nested loops with dictionaries
-
-A common pattern is a dictionary where each key points to a list.
+Common dictionary + list nested loop:
 
 ```python
-weekly_plan = {
-    "Day 8": ["Dictionaries", "Nested dictionaries"],
-    "Day 9": ["Conditionals", "Truthy/falsy"],
-    "Day 10": ["For loops", "While loops", "Break and continue"]
-}
-
 for day, topics in weekly_plan.items():
     print(f"{day}:")
     for topic in topics:
         print(f"- {topic}")
 ```
 
-Good naming matters here:
+Good naming matters:
 
 ```text
 day    -> one dictionary key
 topics -> list of topics for that day
-topic  -> one topic from the list
+topic  -> one topic from that list
 ```
 
 Avoid reusing the same loop variable name in nested loops.
 
-## What was practiced
+---
 
-Day 10 practice included:
+# What was practiced
 
 ```text
-looping through lists
-looping through strings
-using conditionals inside loops
-using range(stop)
-using range(start, stop)
-using range(start, stop, step)
-counting backward with range()
-using range(len(...)) for indexes
-using enumerate() for index + value loops
-using enumerate(..., start=1) for human-friendly numbering
-looping through dictionary keys
-looping through dictionary values
-looping through dictionary items
-using while loops with counters
+looping through lists and strings
+conditionals inside loops
+range(stop), range(start, stop), range(start, stop, step)
+counting forward and backward
+range(len(...)) for index-based access
+enumerate() for index + value loops
+enumerate(..., start=1) for human-friendly numbering
+dictionary keys, values, and items
+while loops with counters
 avoiding infinite loops
-using break
-using continue
-using continue safely inside while loops
-using loop else with for and while
-using nested loops with lists, ranges, and dictionaries
+break and continue
+continue safely inside while loops
+loop else with for and while
+nested loops with lists, ranges, and dictionaries
 ```
 
-## Mistakes, prompt mismatches, and corrections
+---
+
+# Mistakes, prompt mismatches, and corrections
 
 | Issue | Correction / Clarification |
 |---|---|
-| Asked whether `for value in profile:` loops through values | No. A dictionary loops through keys by default. Use `.values()` for values. The loop variable name does not change behavior. |
-| Used plural loop variable names like `keys` and `values` for one item | Code worked, but singular names like `key` and `value` are clearer because each loop run gives one item. |
-| Printed a misleading section label: `Range 0 to 4` for a loop that printed 1 to 5 | Logic was correct, but labels should match output to avoid debugging confusion. |
-| Initial terminal run missed `Practice round 3` | Pasted code was correct; rerunning after saving confirmed the correct output. |
-| Repeated generic labels like `---Numbers---` | Not a bug, but more specific labels make longer terminal output easier to scan. |
-| Used `print(day + ":")` | Valid, but `print(f"{day}:")` is more consistent with the project's f-string style. |
-| Initially skipped `enumerate()` during loops | Fixed as a Day 10 addendum. `enumerate()` is the cleaner Python pattern when both index and item are needed. |
+| Asked whether `for value in profile:` loops through values | No. Dictionaries loop through keys by default. Use `.values()` for values. |
+| Used plural loop variable names like `keys` and `values` | Code worked, but singular names like `key` and `value` are clearer. |
+| Misleading output label like `Range 0 to 4` for a loop that printed 1 to 5 | Labels should match the actual output. |
+| Initial terminal run missed `Practice round 3` | Pasted code was correct; rerunning after saving confirmed the output. |
+| Repeated generic labels like `---Numbers---` | More specific labels make longer terminal output easier to scan. |
+| Used `print(day + ":")` | Valid, but `print(f"{day}:")` is more consistent with f-string style. |
+| Initially skipped `enumerate()` during loops | Fixed as a Day 10 addendum. Use `enumerate()` when both index and item are needed. |
 
-## Final mixed exercise status
+---
 
-The final mixed exercise used a fresh Python bootcamp progress tracker scenario.
+# Final mixed exercise status
 
-It covered:
+Final scenario:
+
+```text
+Python bootcamp progress tracker
+```
+
+Practiced:
 
 ```text
 for loop over a list
@@ -659,39 +430,31 @@ while loop else
 nested loop through dictionary values
 ```
 
-The final exercise was intentionally focused and not bloated. It used 16 meaningful tasks instead of repetitive filler.
-
-Final status:
+Final result:
 
 ```text
 Cleared
 ```
 
-## Day 10 key takeaways
+---
+
+# Day 10 key takeaways
 
 ```text
 Use for loops to repeat work over known items.
+Use while loops when repeating while a condition is true.
 Use clear singular/plural naming in loops.
-Strings can be looped through character by character.
-Lists can be looped through item by item.
 Dictionaries loop through keys by default.
 Use .values() for dictionary values.
 Use .items() for dictionary key-value pairs.
-The variable name after for does not control loop behavior.
 The object after in controls loop behavior.
-Use range(stop) to count from 0 to stop - 1.
-Use range(start, stop) when a custom start is needed.
-Use range(start, stop, step) when a custom step is needed.
-The stop value in range() is excluded.
-Use a negative step to count backward.
-Use range(len(list_name)) when indexes are needed.
+The variable name after for does not control loop behavior.
+range() excludes the stop value.
+Use range(len(list_name)) only when indexes are needed.
 Use enumerate(list_name) when both index and item are needed.
 Use enumerate(list_name, start=1) for human-friendly numbering.
 Prefer enumerate() over range(len(...)) when you need both index and value.
-Use while loops when repeating while a condition is true.
 Every while loop needs a condition that can eventually become false.
-Use += 1 to increment counters.
-Use -= 1 to count down.
 break stops the whole loop.
 continue skips the current loop run.
 Be careful with continue in while loops because it can skip the counter update.
@@ -700,7 +463,9 @@ Nested loops run the inner loop fully for each outer loop item.
 Nested loops multiply work, so use them carefully.
 ```
 
-## Ready for next day
+---
+
+# Ready for next day
 
 ```text
 Day 11 - Functions

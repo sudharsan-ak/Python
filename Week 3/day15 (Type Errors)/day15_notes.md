@@ -7,7 +7,7 @@ https://github.com/Asabeneh/30-Days-Of-Python
 
 ## Main goal
 
-Day 15 focused on understanding and fixing Python type-related errors instead of randomly changing code until it runs.
+Day 15 focused on understanding Python type-related errors and fixing the real cause instead of randomly changing code until it runs.
 
 Core idea:
 
@@ -19,12 +19,10 @@ Example:
 
 ```python
 age = 30
-message = "Age: " + age
+message = "Age: " + age      # TypeError: str + int
 ```
 
-Python cannot concatenate `str + int` directly.
-
-Better:
+Better for display:
 
 ```python
 message = f"Age: {age}"
@@ -32,25 +30,19 @@ message = f"Age: {age}"
 
 ---
 
-# Topic 1 - TypeError basics and tracebacks
-
-## What a TypeError means
+# 1. TypeError basics and tracebacks
 
 A `TypeError` happens when an operation is used with the wrong type of value.
 
-Common example:
+Example:
 
 ```python
 "Python" + 3
 ```
 
-Python can concatenate strings with strings, but not strings with integers.
+Python can concatenate `str + str`, but not `str + int`.
 
-## Reading a traceback
-
-A traceback is Python's crash report.
-
-Read the most useful parts:
+A traceback is Python's crash report. Read it in this order:
 
 ```text
 1. Error type
@@ -58,31 +50,34 @@ Read the most useful parts:
 3. Exact line that crashed
 ```
 
-Example:
+Example message:
 
 ```text
 TypeError: can only concatenate str (not "int") to str
 ```
 
-This tells you Python was trying to concatenate strings, but one value was an integer.
+Meaning:
+
+```text
+Python was trying to concatenate strings, but one value was an integer.
+```
 
 Debugging rule:
 
 ```text
 Do not panic when you see red text.
-First find the error type, crashed line, and bad value type.
+Find the error type, crashed line, and bad value type first.
 ```
 
 ---
 
-# Topic 2 - Unsupported operations between types
+# 2. Common unsupported operations
 
 ## String + number
 
 Wrong:
 
 ```python
-age = 30
 message = "Age: " + age
 ```
 
@@ -114,11 +109,11 @@ Correct for math:
 final_score = int(score) + bonus
 ```
 
-Important distinction:
+Rule:
 
 ```text
 Display goal -> use f-string or str()
-Math goal    -> convert numeric text with int() or float()
+Math goal    -> use int() or float()
 ```
 
 ## List + non-list
@@ -144,48 +139,34 @@ skills.append("Node.js")
 
 ---
 
-# Topic 3 - List, string, and dictionary misuse
+# 3. List, string, and dictionary misuse
 
-## Access pattern depends on type
+Access pattern depends on the type:
 
-```text
-list -> numeric index
-str  -> numeric index or slice
-dict -> key
-```
+| Type | Access pattern | Example |
+|---|---|---|
+| `list` | numeric index | `skills[0]` |
+| `str` | numeric index or slice | `language[0]`, `language[:3]` |
+| `dict` | key | `profile["name"]` |
+| list of dicts | index first, then key | `students[0]["name"]` |
 
-Examples:
-
-```python
-skills = ["Python", "React"]
-print(skills[0])
-
-language = "Python"
-print(language[0])
-
-profile = {"name": "Sudharsan"}
-print(profile["name"])
-```
-
-Wrong list access:
+Common mistakes:
 
 ```python
-skills["first"]
+skills["first"]      # wrong: list index should be number
+language["first"]    # wrong: string index should be number
+profile("name")      # wrong: calls dictionary like a function
 ```
 
-Wrong dictionary call:
+Correct:
 
 ```python
-profile("name")
-```
-
-Correct dictionary access:
-
-```python
+skills[0]
+language[0]
 profile["name"]
 ```
 
-## List of dictionaries
+For a list of dictionaries:
 
 ```python
 students = [
@@ -203,26 +184,20 @@ students[0]         -> first dictionary
 students[0]["name"] -> name inside that dictionary
 ```
 
-## KeyError vs TypeError
-
-Missing dictionary key usually causes `KeyError`, not `TypeError`.
+Missing dictionary keys usually cause `KeyError`, not `TypeError`.
 
 ```python
 course = {"name": "Python"}
-course["day"]
-```
-
-Safer:
-
-```python
 course_day = course.get("day", "Not provided")
 ```
 
 ---
 
-# Topic 4 - NoneType and function return mistakes
+# 4. NoneType and function return mistakes
 
-## Functions return None by default
+`None` means there is no useful value.
+
+A function returns `None` by default if it has no `return`.
 
 Wrong when you need a reusable value:
 
@@ -230,10 +205,8 @@ Wrong when you need a reusable value:
 def show_name():
     print("Sudharsan")
 
-name = show_name()
+name = show_name()   # None
 ```
-
-`name` becomes `None` because the function printed but did not return.
 
 Correct:
 
@@ -251,16 +224,7 @@ print() is for humans.
 return is for the program.
 ```
 
-## Methods that return None
-
-Some methods mutate the original object and return `None`.
-
-Examples:
-
-```python
-scores.sort()
-skills.append("Node.js")
-```
+Some list methods mutate the original list and return `None`.
 
 Wrong:
 
@@ -273,10 +237,7 @@ Correct:
 
 ```python
 scores.sort()
-print(scores)
-
 skills.append("Node.js")
-print(skills)
 ```
 
 Use `sorted()` when you want a new sorted list:
@@ -285,18 +246,7 @@ Use `sorted()` when you want a new sorted list:
 sorted_scores = sorted(scores)
 ```
 
-## NoneType method errors
-
-Wrong:
-
-```python
-city = None
-city.upper()
-```
-
-This fails because `None` is not a string.
-
-Safer dictionary fallback:
+Avoid calling methods on `None`:
 
 ```python
 city = profile.get("city", "Not provided")
@@ -305,15 +255,15 @@ print(city.upper())
 
 ---
 
-# Topic 5 - Debugging type errors step by step
+# 5. Step-by-step debugging process
 
-Use this process:
+Use this checklist:
 
 ```text
 1. Read the last line of the traceback.
 2. Find the exact line that crashed.
 3. Identify the operation on that line.
-4. Check the types of the values involved.
+4. Check the involved value types.
 5. Decide the fix based on the real goal.
 6. Rerun and verify the output.
 ```
@@ -325,16 +275,18 @@ Bad fix:
 ```python
 score = "85"
 bonus = 5
-result = str(score) + str(bonus)  # "855"
+result = str(score) + str(bonus)   # "855"
 ```
 
 Correct if the goal is math:
 
 ```python
-result = int(score) + bonus  # 90
+result = int(score) + bonus        # 90
 ```
 
-## isinstance()
+---
+
+# 6. isinstance() basics
 
 `isinstance()` checks whether a value belongs to a type.
 
@@ -343,12 +295,12 @@ isinstance("90", str)  # True
 isinstance(90, int)    # True
 ```
 
-Useful for mixed data:
+Useful when mixed data needs safe conversion:
 
 ```python
 scores = [80, "90", 75, "85"]
-
 cleaned_scores = []
+
 for score in scores:
     if isinstance(score, str):
         cleaned_scores.append(int(score))
@@ -356,13 +308,7 @@ for score in scores:
         cleaned_scores.append(score)
 ```
 
-Compact version:
-
-```python
-cleaned_scores = [int(score) if isinstance(score, str) else score for score in scores]
-```
-
-Use the loop version when debugging clarity matters.
+Use a normal loop when debugging clarity matters.
 
 ---
 
@@ -398,24 +344,28 @@ Day 15 final mixed exercise cleared.
 
 ---
 
-# Mistakes and corrections from Day 15
-
-## Important corrections
+# Day 15 takeaways
 
 ```text
-Do not assign .append() or .sort() expecting a new list.
-Do not call .upper() on a value that may be None.
+Read tracebacks before changing code.
+Use type() when confused.
+Use f-strings for display.
+Use int() or float() for numeric math.
+Lists and strings use numeric indexes.
+Dictionaries use keys.
 Use get("key", fallback) when a dictionary key may be missing.
-Use f-strings for display instead of messy string concatenation.
-Use int() or float() when the goal is numeric math.
-For nested data, access the outer structure first, then the inner value.
+Functions without return return None.
+append() and sort() mutate the original list and return None.
+Use sorted() when you need a new sorted list.
+Use isinstance() for mixed data checks when needed.
+Fix the root cause, not just the crashed line.
 ```
 
-## Exercise design correction
+Exercise design correction:
 
-Final exercises should use fresh real-world scenarios when possible. Repeating student/course/Python-learning tracker scenarios makes practice feel artificial and repetitive.
-
-This rule has been added to `project_rules.md`.
+```text
+Final mixed exercises should use fresh real-world scenarios instead of repeatedly using student/course/Python-learning tracker scenarios.
+```
 
 ---
 
@@ -432,7 +382,6 @@ Next: Day 16 - Python Date Time
 ```text
 Read tracebacks carefully.
 Check the exact crashed line.
-Use type() when confused.
 Choose fixes based on intent: display, math, access, mutation, or fallback.
 Remember that None often comes from missing return values or methods that mutate in place.
 ```
