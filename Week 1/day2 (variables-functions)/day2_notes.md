@@ -5,29 +5,29 @@ Status: Cleared
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
-## What Day 2 covered
+## Main goal
 
-Day 2 expanded the basics from Day 1. The main goal was to get comfortable with Python variables, built-in functions, data types, type conversion, arithmetic, and the first intro to collections.
+Day 2 expanded the basics from Day 1: built-in functions, cleaner variable naming, multiple assignment, common data types, type conversion, arithmetic, assignment shortcuts, and first awareness of Python collections.
 
-Topics covered:
+## Core topics
 
 ```text
 built-in functions
 variable naming
-multiple variable assignment
+multiple assignment
 data types
 type checking
 type conversion
-numbers and arithmetic
+arithmetic
 assignment shortcuts
-lists, dictionaries, tuples, sets intro
+collection intro
 ```
 
-## 1. Built-in functions
+---
 
-Built-in functions are functions Python gives you by default.
+## Built-in functions
 
-Main functions practiced:
+Common functions practiced:
 
 ```python
 print()
@@ -39,63 +39,33 @@ float()
 str()
 ```
 
-`print()` shows output.
-
-```python
-print("Hello")
-```
-
-`len()` returns the length of a string or collection.
+Examples:
 
 ```python
 name = "Sudharsan"
-print(len(name))
-```
-
-`type()` shows the data type of a value.
-
-```python
 age = 30
-print(type(age))  # <class 'int'>
+
+print(len(name))
+print(type(age))
 ```
 
-Use `type()` when confused about whether something is a string, number, list, etc.
+Use `type()` when confused about whether a value is text, a number, a list, a dictionary, etc.
 
-`input()` gets user input from the terminal.
-
-```python
-user_age = input("Enter your age: ")
-```
-
-Important:
+Remember:
 
 ```text
 input() always returns a string.
 ```
 
-`int()`, `float()`, and `str()` are used for type conversion.
+---
 
-```python
-age = int("30")
-price = float("99.99")
-age_text = str(30)
-```
+## Variable naming
 
-## 2. Variable naming
-
-Python style uses `snake_case`.
-
-Good:
+Use `snake_case`.
 
 ```python
 first_name = "Sudharsan"
 years_experience = 6
-```
-
-Avoid JavaScript-style camelCase while learning Python:
-
-```python
-yearsExperience = 6
 ```
 
 Boolean names should read like yes/no questions.
@@ -106,23 +76,17 @@ has_experience = True
 can_relocate = True
 ```
 
-Constants use uppercase by convention:
+Constants use uppercase by convention.
 
 ```python
 MAX_LOGIN_ATTEMPTS = 5
 DEFAULT_CITY = "Lewisville"
 ```
 
-Important rule:
+Important:
 
 ```text
-Variable names should describe the value they currently store.
-```
-
-Bad:
-
-```python
-user_age = int(input("Enter age: ")) + 1
+A variable name should describe what the value currently stores.
 ```
 
 Better:
@@ -132,22 +96,32 @@ user_age = int(input("Enter age: "))
 next_year_age = user_age + 1
 ```
 
-## 3. Multiple variable assignment
+Worse:
 
-Python can assign multiple variables in one line.
+```python
+user_age = int(input("Enter age: ")) + 1
+```
+
+because `user_age` no longer stores the user's current age.
+
+---
+
+## Multiple assignment
+
+Python can assign multiple values at once.
 
 ```python
 first_name, last_name, age = "Sudharsan", "Srinivasan", 30
 ```
 
-Swapping values:
+Swap values:
 
 ```python
 x, y = 100, 200
 x, y = y, x
 ```
 
-Unpacking a list:
+Unpack a list:
 
 ```python
 skills = ["JavaScript", "React", "Python"]
@@ -160,17 +134,9 @@ Rule:
 The number of variables must match the number of values.
 ```
 
-This fails:
+---
 
-```python
-a, b = [1, 2, 3]
-```
-
-because there are 3 values but only 2 variables.
-
-## 4. Data types
-
-Main data types introduced:
+## Data types
 
 ```python
 name = "Sudharsan"                         # str
@@ -178,49 +144,29 @@ age = 30                                   # int
 rating = 4.9                               # float
 is_learning_python = True                  # bool
 skills = ["JavaScript", "React", "Python"] # list
-
-profile = {
-    "name": name,
-    "age": age,
-    "city": "Lewisville"
-}                                          # dict
-
+profile = {"name": name, "age": age}       # dict
 coordinates = (2, 3)                       # tuple
-unique_numbers = {1, 2, 3, 3, 4}           # set
+unique_numbers = {1, 2, 3}                 # set
 ```
 
-Simple mental model:
+Mental model:
 
 ```text
 str   -> text
 int   -> whole number
 float -> decimal number
-bool  -> True/False
+bool  -> True / False
 list  -> ordered collection
 dict  -> key-value data
-tuple -> fixed-style grouped data
+tuple -> fixed grouped data
 set   -> unique values
 ```
 
-Dictionaries are similar in idea to JavaScript objects.
+---
 
-## 5. Type conversion / casting
+## Type conversion
 
-Type conversion means changing one type into another.
-
-Common conversions:
-
-```python
-int()
-float()
-str()
-bool()
-list()
-set()
-tuple()
-```
-
-Examples:
+Type conversion changes one type into another.
 
 ```python
 age = int("30")
@@ -230,62 +176,31 @@ letters = list("Python")
 unique_numbers = set([1, 2, 2, 3])
 ```
 
-Important boolean trap:
+Important trap:
 
 ```python
-bool("False")
+bool("False")  # True
 ```
 
-returns:
+Any non-empty string is truthy, even if the text says `"False"`.
 
-```text
-True
-```
+---
 
-because non-empty strings are truthy.
+## Arithmetic and shortcuts
 
-## 6. Numbers and arithmetic
-
-Arithmetic operators practiced:
+Operators:
 
 ```text
 +    addition
 -    subtraction
 *    multiplication
-/    division
+/    division, returns float
 //   floor division
-%    modulus
+%    remainder
 **   exponent
 ```
 
-Example:
-
-```python
-num1 = 20
-num2 = 6
-
-print(num1 + num2)
-print(num1 / num2)
-print(num1 // num2)
-print(num1 % num2)
-```
-
-Important:
-
-```text
-/ returns a float.
-% returns the remainder.
-```
-
-Modulus is useful for checking even/odd numbers later.
-
-```python
-number % 2
-```
-
-## 7. Assignment shortcut operators
-
-Shortcut operators update an existing value.
+Shortcut assignment:
 
 ```python
 score = 50
@@ -296,21 +211,15 @@ score *= 2
 score /= 10
 ```
 
-Python does not use:
-
-```python
-score++
-```
-
-Use:
+Python does not use `score++`. Use:
 
 ```python
 score += 1
 ```
 
-## What was practiced
+---
 
-Day 2 practice included:
+## What was practiced
 
 ```text
 using len() and type()
@@ -320,8 +229,6 @@ multiple assignment
 swapping values
 unpacking lists
 creating common data types
-printing types
-using lists and dictionaries
 casting strings to numbers
 using set() to remove duplicates
 doing arithmetic
@@ -329,15 +236,16 @@ using assignment shortcuts
 calculating tax/final price
 ```
 
+---
+
 ## Mistakes and corrections
 
 | Issue | Correction |
 |---|---|
-| Misleading variable name for calculated age | Use `next_year_age` after adding 1 |
-| Forgetting to print requested types | Read every prompt item carefully |
-| Confusing `"30"` and `30` | Use `int()` before math |
-| Raw output can be hard to read | Add labels when helpful |
-| Over-formatting dictionaries | Keep normal readable Python formatting |
+| Misleading calculated-age variable | Use `next_year_age` after adding 1 |
+| Forgot requested type output | Read every prompt item carefully |
+| Confused `"30"` and `30` | Use `int()` before math |
+| Raw output hard to read | Add labels when helpful |
 
 Key correction:
 
@@ -346,29 +254,19 @@ user_age = int(input("Enter age: "))
 next_year_age = user_age + 1
 ```
 
-not:
+---
 
-```python
-user_age = int(input("Enter age: ")) + 1
-```
-
-## Day 2 key takeaways
+## Key takeaways
 
 ```text
 Use type() to inspect values.
-Use len() for strings/lists.
+Use len() for strings and collections.
 Use snake_case.
 Use clear variable names.
 input() always returns a string.
-Convert input before doing math.
-Use int() for whole numbers.
-Use float() for decimal numbers.
-Use str() when converting values to text.
+Convert input before math.
+Use int(), float(), and str() for casting.
 Use set() to remove duplicates.
-Dictionaries store key-value data.
-Lists store ordered data.
-Tuples are fixed-style grouped data.
-Sets store unique values.
 Use +=, -=, *=, /= to update values.
 Use % to get the remainder.
 ```

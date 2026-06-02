@@ -1,25 +1,20 @@
 # Day 1 Notes - Python Basics
 
-Status:
-
-```text
-Cleared
-```
+Status: Cleared
 
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
-## What Day 1 covered
+## Main goal
 
-Day 1 was the absolute beginner setup day. The goal was not to master Python yet. The goal was to understand how a Python file runs, how to print output, how to store values in variables, how basic data types look, and how to get simple user input.
+Day 1 introduced the basic shape of Python: running a file, printing output, writing comments, storing values in variables, using basic data types, formatting output, and accepting simple user input.
 
-Topics covered:
+## Core topics
 
 ```text
 print()
 comments
 variables
-basic data types
 strings
 numbers
 booleans
@@ -31,140 +26,39 @@ running a Python file
 
 ---
 
-## 1. Printing output
-
-Python uses `print()` to show output in the terminal.
+## Core syntax
 
 ```python
-print("Hi, I'm Sudharsan")
+# This is a comment
+print("Hello, Python")
+
+first_name = "Sudharsan"
+last_name = "Srinivasan"
+age = 30
+is_learning_python = True
+
+full_name = f"{first_name} {last_name}"
+print(f"My name is {full_name}")
 ```
 
-JavaScript comparison:
-
-```javascript
-console.log("Hi, I'm Sudharsan");
-```
-
-The big beginner differences:
+Python comparison:
 
 ```text
-Python uses print()
-JavaScript uses console.log()
-Python does not need semicolons
+Python     -> print()
+JavaScript -> console.log()
+
+Python     -> True / False
+JavaScript -> true / false
+
+Python style -> snake_case
+JS style     -> camelCase
 ```
 
 ---
 
-## 2. Comments
-
-Comments are notes for humans. Python ignores them when running the file.
-
-```python
-# This prints a greeting
-print("Hello")
-```
-
-Good comments explain the purpose of code. Bad comments only repeat obvious code.
-
-Useful comment:
-
-```python
-# Convert input to int before doing math
-age = int(input("Enter your age: "))
-```
-
-Less useful comment:
-
-```python
-# Print name
-print(name)
-```
-
----
-
-## 3. Variables
+## Variables and basic types
 
 Variables store values.
-
-```python
-name = "Sudharsan"
-age = 30
-city = "Lewisville"
-```
-
-Python uses `snake_case` for variable names.
-
-Good:
-
-```python
-first_name = "Sudharsan"
-years_experience = 6
-```
-
-Avoid JavaScript-style naming in Python:
-
-```python
-firstName = "Sudharsan"
-yearsExperience = 6
-```
-
-That style is valid in many cases, but it is not Python style.
-
----
-
-## 4. Strings vs numbers
-
-A string is text. Strings need quotes.
-
-```python
-name = "Sudharsan"
-city = "Lewisville"
-```
-
-Numbers usually do not need quotes.
-
-```python
-age = 30
-years_experience = 6
-```
-
-Important distinction:
-
-```python
-age = 30
-```
-
-means `age` is a number.
-
-```python
-age = "30"
-```
-
-means `age` is text.
-
-Both may print fine, but only the numeric version works directly in math.
-
-```python
-age = 30
-print(age + 1)  # 31
-```
-
-This would fail:
-
-```python
-age = "30"
-print(age + 1)
-```
-
-because Python cannot directly add a string and a number.
-
----
-
-## 5. Basic data types introduced
-
-Day 1 introduced the main idea that values have types.
-
-Common types:
 
 ```python
 name = "Sudharsan"        # str
@@ -174,117 +68,59 @@ is_learning = True        # bool
 skills = ["JS", "React"]  # list
 ```
 
-The important beginner idea:
+Important distinction:
+
+```python
+age = 30    # number, works in math
+age = "30"  # string/text, does not directly work in math
+```
+
+Rule:
 
 ```text
-Different types behave differently.
+Use numbers when the value should be calculated.
+Use strings when the value is text.
 ```
-
-A number can be used in math.
-
-A string is text.
-
-A boolean is either `True` or `False`.
 
 ---
 
-## 6. Booleans
+## f-strings
 
-Python booleans are capitalized:
-
-```python
-True
-False
-```
-
-Not JavaScript-style lowercase:
-
-```python
-true
-false
-```
-
-Example:
-
-```python
-is_engineer = True
-is_learning_python = True
-```
-
-This was only introduced lightly on Day 1 and practiced more deeply later.
-
----
-
-## 7. f-strings
-
-f-strings are the clean Python way to place variables inside text.
+Use f-strings to place variables inside text.
 
 ```python
 first_name = "Sudharsan"
 last_name = "Srinivasan"
 
 full_name = f"{first_name} {last_name}"
-
 print(f"My name is {full_name}")
 ```
 
-JavaScript comparison:
-
-```javascript
-const fullName = `${firstName} ${lastName}`;
-```
-
-Python f-string:
-
-```python
-full_name = f"{first_name} {last_name}"
-```
-
-The `f` before the quote tells Python to evaluate variables inside `{}`.
+The `f` before the string allows Python to evaluate values inside `{}`.
 
 ---
 
-## 8. User input
+## User input
 
-Python uses `input()` to get user input from the terminal.
+`input()` gets text from the terminal.
 
 ```python
 name = input("What is your name? ")
 print(f"Hello, {name}")
 ```
 
-Important rule:
+Important:
 
 ```text
 input() always returns a string.
 ```
 
-Even if the user types:
-
-```text
-30
-```
-
-Python receives it as:
-
-```python
-"30"
-```
-
-That matters when doing math.
-
----
-
-## 9. Converting input for math
-
-This is wrong for math:
+Wrong for math:
 
 ```python
 age = input("Enter your age: ")
 next_year_age = age + 1
 ```
-
-because `age` is a string.
 
 Correct:
 
@@ -295,59 +131,33 @@ next_year_age = age + 1
 print(f"Next year, you will be {next_year_age}")
 ```
 
-`int()` converts a numeric string into an integer.
-
-Another clean version:
-
-```python
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-
-print(num1 + num2)
-```
-
 ---
 
-## What was practiced on Day 1
-
-Day 1 exercises practiced:
+## What was practiced
 
 ```text
-printing a greeting
+printing output
 creating variables
-using strings and numbers
-printing a sentence with f-strings
-getting user input
+using strings, numbers, and booleans
+using f-strings
+getting input
 converting input with int()
-adding two user-provided numbers
-combining first name and last name
-printing years of software engineering experience
+adding user-provided numbers
+printing simple profile information
 ```
-
-The goal was to get comfortable writing and running simple Python code.
 
 ---
 
-## Corrections and mistakes from Day 1
+## Mistakes and corrections
 
 | Issue | Correction |
 |---|---|
-| Stored `age` as `"30"` | Use `age = 30` when age should behave like a number |
-| Converted input only inside `print()` | Prefer converting earlier and storing the clean numeric value |
-| Extra spacing in variable assignment | Use clean spacing like `years_experience = 6` |
-| Mixed text and number risk | Use `int()` before math or use f-strings for display |
+| Stored numeric age as `"30"` | Use `age = 30` when age should behave like a number |
+| Converted input too late | Convert input before doing math |
+| Mixed string and number in math | Use `int()` for math or f-strings for display |
+| Extra spacing in assignments | Use clean spacing like `years_experience = 6` |
 
-Example correction:
-
-Less clean:
-
-```python
-num1 = input("Enter first number: ")
-num2 = input("Enter second number: ")
-print(int(num1) + int(num2))
-```
-
-Cleaner:
+Cleaner input pattern:
 
 ```python
 num1 = int(input("Enter first number: "))
@@ -356,33 +166,23 @@ num2 = int(input("Enter second number: "))
 print(num1 + num2)
 ```
 
-Why this is better:
-
-```text
-After conversion, num1 and num2 are truly numbers.
-The variable names match what the values are used for.
-The final print stays simple.
-```
-
 ---
 
-## Day 1 key takeaways
+## Key takeaways
 
 ```text
 Python runs code line by line.
-Use print() to show output.
+Use print() for output.
 Comments start with #.
-Variables store values.
+Use snake_case.
 Strings need quotes.
 Numbers usually do not need quotes.
+Python booleans are True and False.
 input() always returns a string.
-Use int() before doing math with input.
+Use int() before math with numeric input.
 Use f-strings for clean output.
-Use snake_case variable names.
-Keep spacing clean.
+Python does not need semicolons.
 ```
-
----
 
 ## Ready for next day
 
