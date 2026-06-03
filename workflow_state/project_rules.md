@@ -63,13 +63,21 @@ End each day with a focused mixed final exercise.
 Avoid overly long final exercises; keep them focused instead of 35+ item checklists.
 Use fresh examples/scenarios in final mixed exercises instead of repeating exact topic-exercise examples.
 Prefer realistic, fresh final-exercise scenarios over repeatedly using student/course/Python-learning tracker scenarios, unless the topic specifically needs that framing.
-For topic starter snippets, include a separator print statement under the topic header.
+For topic starter snippets, include a separator comment line, topic header, blank line, then the separator print statement.
+Do not over-fragment exercises by making every small variable creation its own numbered task.
+Combine related setup steps into one task when it keeps the exercise compact and readable.
+Keep enough detail in the task comments to make the expected data and output clear.
+If a practice file is getting too large, create a separate focused file for practical scenarios or the final exercise.
+When testing alternate dictionary data, keeping a separate commented test dictionary is acceptable, but avoid duplicate keys if the test dictionary will be uncommented.
 Vary 2-3 exercise tasks slightly from teaching examples so practice is not pure copying.
 ```
 
-Preferred separator print pattern:
+Preferred topic starter pattern:
 
 ```python
+# ---------------------------------------------------------------------
+# Topic X - Topic Name
+
 print(f"{'-' * 30} Topic X {'-' * 30}")
 ```
 

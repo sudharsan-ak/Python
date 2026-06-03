@@ -9,8 +9,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Week 1 - Cleared
 Week 2 - Cleared
 Week 3 - In progress
-Completed through: Day 16 - Python Date Time
-Next: Day 17 - Exception Handling
+Completed through: Day 17 - Exception Handling
+Next: Day 18 - Regular Expressions
 ```
 
 ## Detailed status
@@ -32,7 +32,8 @@ Day 13 - Cleared
 Day 14 - Cleared
 Day 15 - Cleared
 Day 16 - Cleared
-Next: Day 17 - Exception Handling
+Day 17 - Cleared
+Next: Day 18 - Regular Expressions
 ```
 
 ## Current Project Sources structure
@@ -51,6 +52,7 @@ week1_notes.md
 week2_notes.md
 day15_notes.md
 day16_notes.md
+day17_notes.md
 ```
 
 Optional transition file:
@@ -61,7 +63,7 @@ learning_index.md
 
 If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 17
+## Files to read before starting Day 18
 
 ```text
 README.md
@@ -75,32 +77,38 @@ week1_notes.md
 week2_notes.md
 day15_notes.md
 day16_notes.md
+day17_notes.md
 ```
 
 ## Active week status
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16
-Next: Day 17
+Completed: Day 15, Day 16, Day 17
+Next: Day 18
 ```
 
 ## Next day
 
 ```text
-Day 17 - Exception Handling
+Day 18 - Regular Expressions
 ```
 
-Expected Day 17 focus:
+Expected Day 18 focus:
 
 ```text
-Exception handling basics
-try / except
-catching specific errors
-else and finally blocks
-error messages and tracebacks
-safe input/conversion patterns
-raising awareness without over-bloating
+regular expression basics
+Python re module
+re.search()
+re.findall()
+re.match() awareness
+basic patterns and raw strings
+character classes
+quantifiers
+anchors
+simple groups
+re.sub() for replacement
+practical validation/search examples without over-bloating
 focused final mixed exercise
 ```
 
@@ -120,5 +128,5 @@ yield
 ## Current confidence level
 
 ```text
-Ready for Day 17 - Exception Handling
+Ready for Day 18 - Regular Expressions
 ```

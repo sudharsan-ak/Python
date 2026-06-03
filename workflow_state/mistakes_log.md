@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 16
-Next update: after Day 17, if new reusable mistakes are found
+Current scope: Day 1 through Day 17
+Next update: after Day 18, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -120,6 +120,20 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | `%I` vs `%H` parsing issue | Use `%H` for 24-hour/no-AM-PM input; use `%I` with `%p` for 12-hour AM/PM input |
 | timedelta seconds confusion | `.seconds` is leftover seconds after days; use `.total_seconds()` for full duration in seconds |
 | Plain time subtraction trap | Do not subtract plain `time` objects directly when the date is unknown; use `datetime` objects |
+| Bare except overuse | Prefer catching the specific expected exception instead of hiding every possible error |
+| Over-wide try blocks | Keep try focused on the risky operation; move success logic to else when useful |
+| else misunderstanding | else is the success path; it runs only when the try block has no exception |
+| finally misunderstanding | finally runs whether the try block succeeds or fails |
+| Forced else/finally | Do not add else or finally to every block unless it improves the flow |
+| Wrong exception choice | Use ValueError for bad conversion/parsing, KeyError for missing required keys, IndexError for bad indexes |
+| Exception message formatting | Use `except SomeError as error` when the original message should be printed or inspected |
+| Optional dictionary fields | Use `.get("key", fallback)` instead of try/except when missing data is normal and optional |
+| Required dictionary fields | Use KeyError handling when missing data is a required-field error path |
+| Silent fallback abuse | Do not replace invalid data with 0 or another default unless that fallback is truly intended |
+| Currency display mismatch | Use `{value:.2f}` when output must show exactly two decimal places |
+| Duplicate dictionary test keys | Avoid repeated keys in an active dictionary; Python keeps only the last duplicate key |
+| Bloated exercise snippets | Do not split every tiny variable creation into separate numbered tasks |
+| Missing topic starter format | Topic snippets should include `# ---------------------------------------------------------------------`, then `# Topic X - Name`, then the separator print |
 
 ---
 
@@ -137,6 +151,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log updated through Day 16.
-Ready to keep using during Day 17 - Exception Handling.
+Mistakes log updated through Day 17.
+Ready to keep using during Day 18 - Regular Expressions.
 ```

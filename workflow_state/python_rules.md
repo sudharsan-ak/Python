@@ -241,6 +241,28 @@ Use timedelta.total_seconds() when the full duration in seconds is needed.
 Do not assume timedelta.seconds means total seconds; it is only the leftover seconds after days are counted.
 Avoid subtracting plain time objects directly when date context matters; use datetime objects for duration calculations.
 datetime.combine(date_object, time_object) can combine separate date and time objects into one datetime object when needed.
+Use try / except to handle risky operations that may fail at runtime.
+Prefer catching specific exceptions instead of using a bare except.
+Use except ValueError for invalid numeric conversion or parsing values.
+Use except TypeError when the operation receives the wrong type.
+Use except ZeroDivisionError when division by zero is possible.
+Use except KeyError when a required dictionary key may be missing.
+Use except IndexError when a list/string index may be out of range.
+Use except SomeError as error when the original exception message is useful for debugging or display.
+Only one matching except block runs for a raised exception.
+Use else after try / except for logic that should run only when no exception happened.
+Use finally for code that must run whether the try block succeeds or fails.
+Do not force else or finally into every try / except block; use them only when they make the flow clearer.
+Keep try blocks focused on the risky operation instead of wrapping unrelated code.
+Put success-only processing in else when it depends on successful risky code.
+Use fallback values in except only when a default value is truly acceptable.
+Do not silently replace bad data with defaults when the bad data should be rejected.
+Use .get("key", fallback) for optional dictionary fields.
+Use try / except KeyError for missing required dictionary fields when the missing field is an error path.
+Use datetime.strptime() inside try / except ValueError when parsing date text from uncertain input.
+Use separate except blocks when different failures need different messages.
+Avoid using exception handling as a replacement for simple checks or clean data access.
+For money-style output, use formatting like :.2f when two decimal places are required.
 ```
 
 ---

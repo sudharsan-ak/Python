@@ -11,8 +11,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Part 2 covers Week 3 and Week 4.
 Week 3: Day 15 to Day 21 - In progress
 Week 4: Day 22 to Day 28 - Not started
-Current completed through: Day 16
-Next: Day 17 - Exception Handling
+Current completed through: Day 17
+Next: Day 18 - Regular Expressions
 ```
 
 This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into a notes dump.
@@ -25,7 +25,8 @@ This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into 
 |---|---:|---|---|---|
 | Day 15 | Week 3 Day 1 | Python Type Errors | Cleared | `day15_notes.md` |
 | Day 16 | Week 3 Day 2 | Python Date Time | Cleared | `day16_notes.md` |
-| Day 17 | Week 3 Day 3 | Exception Handling | Next | TBD |
+| Day 17 | Week 3 Day 3 | Exception Handling | Cleared | `day17_notes.md` |
+| Day 18 | Week 3 Day 4 | Regular Expressions | Next | TBD |
 
 ---
 
@@ -33,8 +34,8 @@ This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into 
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16
-Next: Day 17
+Completed: Day 15, Day 16, Day 17
+Next: Day 18
 ```
 
 Week 3 currently includes:
@@ -42,7 +43,8 @@ Week 3 currently includes:
 ```text
 Day 15 - Python Type Errors: Cleared
 Day 16 - Python Date Time: Cleared
-Day 17 - Exception Handling: Next
+Day 17 - Exception Handling: Cleared
+Day 18 - Regular Expressions: Next
 ```
 
 ---
@@ -149,7 +151,6 @@ Key reminders:
 After import datetime, use datetime.datetime.now().
 After from datetime import datetime, use datetime.now().
 Do not name files datetime.py.
-Use date(year, month, day), time(hour, minute), and datetime(year, month, day, hour, minute).
 Use strftime() to turn date/time objects into strings.
 Use strptime() to turn strings into datetime objects.
 The strptime() format string must match the input string exactly.
@@ -166,28 +167,90 @@ Avoid subtracting plain time objects directly when date context matters.
 Status:
 
 ```text
+Cleared
+```
+
+Notes file:
+
+```text
+day17_notes.md
+```
+
+Covered:
+
+```text
+exception basics
+try / except
+catching specific exceptions
+reading exception messages with as error
+multiple except blocks
+else block for success-only logic
+finally block for always-run logic
+safe int and float conversion
+fallback value pattern
+safe date parsing with strptime()
+.get() for optional dictionary fields
+KeyError for required dictionary fields
+IndexError for invalid list index access
+practical exception handling patterns
+focused real-world final mixed exercise
+```
+
+Final exercise scenario:
+
+```text
+Warehouse shipment intake checker
+```
+
+Key reminders:
+
+```text
+Catch specific exceptions instead of using bare except.
+Keep try blocks focused on the risky operation.
+Use else for success logic after a successful try block.
+Use finally for code that must always run.
+Use .get() for optional dictionary fields.
+Use KeyError handling when a missing required field is an error path.
+Use ValueError for failed conversion/parsing cases.
+Use IndexError for invalid list indexes.
+Use formatted output like :.2f for money values when exact display matters.
+Do not overuse try / except when a simpler safe pattern is clearer.
+```
+
+---
+
+## Day 18 - Regular Expressions
+
+Status:
+
+```text
 Next
 ```
 
 Expected focus:
 
 ```text
-try / except basics
-catching specific exceptions
-else and finally blocks
-safe conversion/input patterns
-reading exception messages
-practical examples
+regular expression basics
+Python re module
+raw strings for regex patterns
+re.search()
+re.findall()
+re.match() awareness
+basic character classes and quantifiers
+anchors
+simple groups
+re.sub()
+practical validation/search examples
 focused final mixed exercise
 ```
 
-Day 17 should stay paced one topic at a time and should not become a giant exception-reference dump.
+Day 18 should stay paced one topic at a time and should not become a giant regex-reference dump.
 
 ---
 
 ## Current confidence level
 
 ```text
-Day 16 cleared.
-Ready for Day 17 - Exception Handling.
+Day 17 cleared.
+Ready for Day 18 - Regular Expressions.
 ```
