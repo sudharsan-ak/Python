@@ -263,6 +263,42 @@ Use datetime.strptime() inside try / except ValueError when parsing date text fr
 Use separate except blocks when different failures need different messages.
 Avoid using exception handling as a replacement for simple checks or clean data access.
 For money-style output, use formatting like :.2f when two decimal places are required.
+
+Use the built-in re module for regular expression work.
+Use raw strings like r"\d+" for regex patterns.
+A regex pattern describes text to search, validate, extract, or replace.
+re.search(pattern, text) finds the first match anywhere in the text.
+re.search() returns a match object when found and None when not found.
+Check that a match object exists before calling .group().
+Use match.group() to get the full matched text.
+Use match.group(1), match.group(2), etc. to get captured group values.
+re.findall(pattern, text) returns all matches as a list.
+re.findall() returns an empty list when no matches are found.
+re.match(pattern, text) checks only from the beginning of the string.
+Use \d for one digit, \w for one word character, and \s for one whitespace character.
+Use + for one or more of the previous pattern.
+Use * for zero or more of the previous pattern.
+Use ? for zero or one of the previous pattern.
+Use {n} for exactly n repetitions.
+Use character ranges like [A-Z], [a-z], and [0-9] for grouped character choices.
+Use ^ to mark the start of a string and $ to mark the end of a string.
+Use anchors when the whole string must match a validation format.
+Use parentheses to create capture groups.
+Use \. to match a real dot because . is a regex wildcard.
+Remember findall() with groups returns captured group values instead of full matches.
+Use re.sub(pattern, replacement, text) to replace or clean matching text.
+re.sub() returns a new string and does not mutate the original string.
+Use an empty replacement string with re.sub() to remove matched text.
+Use count=1 with re.sub() when only the first match should be replaced.
+Use re.fullmatch() as a cleaner full-string validation option.
+Use re.finditer() when you need all match objects and their positions.
+Use re.split() when text needs to be split using multiple separators.
+Use re.compile() when the same regex pattern is reused multiple times.
+Use re.IGNORECASE when matching should ignore uppercase/lowercase differences.
+Use | for OR-style alternatives inside a regex pattern.
+Use \b for whole-word boundaries.
+Keep regex patterns small and readable instead of writing giant patterns too early.
+Do not hardcode exact values when the goal is to parse a reusable pattern.
 ```
 
 ---

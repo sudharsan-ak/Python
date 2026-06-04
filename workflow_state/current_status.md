@@ -9,8 +9,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Week 1 - Cleared
 Week 2 - Cleared
 Week 3 - In progress
-Completed through: Day 17 - Exception Handling
-Next: Day 18 - Regular Expressions
+Completed through: Day 18 - Regular Expressions
+Next: Day 19 - File Handling
 ```
 
 ## Detailed status
@@ -33,7 +33,8 @@ Day 14 - Cleared
 Day 15 - Cleared
 Day 16 - Cleared
 Day 17 - Cleared
-Next: Day 18 - Regular Expressions
+Day 18 - Cleared
+Next: Day 19 - File Handling
 ```
 
 ## Current Project Sources structure
@@ -53,6 +54,7 @@ week2_notes.md
 day15_notes.md
 day16_notes.md
 day17_notes.md
+day18_notes.md
 ```
 
 Optional transition file:
@@ -63,7 +65,7 @@ learning_index.md
 
 If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 18
+## Files to read before starting Day 19
 
 ```text
 README.md
@@ -78,37 +80,34 @@ week2_notes.md
 day15_notes.md
 day16_notes.md
 day17_notes.md
+day18_notes.md
 ```
 
 ## Active week status
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16, Day 17
-Next: Day 18
+Completed: Day 15, Day 16, Day 17, Day 18
+Next: Day 19
 ```
 
 ## Next day
 
 ```text
-Day 18 - Regular Expressions
+Day 19 - File Handling
 ```
 
-Expected Day 18 focus:
+Expected Day 19 focus:
 
 ```text
-regular expression basics
-Python re module
-re.search()
-re.findall()
-re.match() awareness
-basic patterns and raw strings
-character classes
-quantifiers
-anchors
-simple groups
-re.sub() for replacement
-practical validation/search examples without over-bloating
+file handling basics
+opening and reading files
+with open(...) context manager
+file modes like r, w, a
+writing and appending text
+reading line by line
+basic file path awareness
+safe file handling habits
 focused final mixed exercise
 ```
 
@@ -128,5 +127,5 @@ yield
 ## Current confidence level
 
 ```text
-Ready for Day 18 - Regular Expressions
+Ready for Day 19 - File Handling
 ```

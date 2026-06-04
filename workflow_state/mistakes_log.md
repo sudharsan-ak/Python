@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 17
-Next update: after Day 18, if new reusable mistakes are found
+Current scope: Day 1 through Day 18
+Next update: after Day 19, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -134,6 +134,19 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | Duplicate dictionary test keys | Avoid repeated keys in an active dictionary; Python keeps only the last duplicate key |
 | Bloated exercise snippets | Do not split every tiny variable creation into separate numbered tasks |
 | Missing topic starter format | Topic snippets should include `# ---------------------------------------------------------------------`, then `# Topic X - Name`, then the separator print |
+| Regex raw string habit | Use raw strings like `r"\d+"` so backslashes stay regex-friendly |
+| Match object confusion | A match object means found; `None` means not found |
+| Calling `.group()` on None | Check `if result:` before using `.group()` |
+| `group()` vs `group(1)` | `group()` is full match; `group(1)` is first captured group |
+| `search()` vs `match()` | `search()` checks anywhere; `match()` checks only the beginning |
+| `findall()` with groups surprise | If the pattern has groups, `findall()` returns captured values, not full matches |
+| `\d` vs `\d+` | `\d` finds one digit; `\d+` finds a full digit sequence |
+| Anchor misuse | Use `^` and `$` only when the whole string must match the pattern |
+| Real dot vs wildcard dot | Use `\.` for a real dot; `.` by itself is a wildcard |
+| Hardcoded parsing | Do not search exact known values like `Maya Patel` when the goal is reusable extraction |
+| Over-specific phone patterns | Use `\d{3}-\d{3}-\d{4}` instead of hardcoding a starting number like `555` |
+| Regex over-bloating | Learn and use small patterns first; avoid giant unreadable regex |
+| Exercise copy-paste issue | Topic exercises should vary from teaching examples instead of repeating exact same values |
 
 ---
 
@@ -151,6 +164,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log updated through Day 17.
-Ready to keep using during Day 18 - Regular Expressions.
+Mistakes log updated through Day 18.
+Ready to keep using during Day 19 - File Handling.
 ```

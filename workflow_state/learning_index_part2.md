@@ -11,8 +11,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Part 2 covers Week 3 and Week 4.
 Week 3: Day 15 to Day 21 - In progress
 Week 4: Day 22 to Day 28 - Not started
-Current completed through: Day 17
-Next: Day 18 - Regular Expressions
+Current completed through: Day 18
+Next: Day 19 - File Handling
 ```
 
 This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into a notes dump.
@@ -26,7 +26,8 @@ This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into 
 | Day 15 | Week 3 Day 1 | Python Type Errors | Cleared | `day15_notes.md` |
 | Day 16 | Week 3 Day 2 | Python Date Time | Cleared | `day16_notes.md` |
 | Day 17 | Week 3 Day 3 | Exception Handling | Cleared | `day17_notes.md` |
-| Day 18 | Week 3 Day 4 | Regular Expressions | Next | TBD |
+| Day 18 | Week 3 Day 4 | Regular Expressions | Cleared | `day18_notes.md` |
+| Day 19 | Week 3 Day 5 | File Handling | Next | TBD |
 
 ---
 
@@ -34,8 +35,8 @@ This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into 
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16, Day 17
-Next: Day 18
+Completed: Day 15, Day 16, Day 17, Day 18
+Next: Day 19
 ```
 
 Week 3 currently includes:
@@ -44,7 +45,8 @@ Week 3 currently includes:
 Day 15 - Python Type Errors: Cleared
 Day 16 - Python Date Time: Cleared
 Day 17 - Exception Handling: Cleared
-Day 18 - Regular Expressions: Next
+Day 18 - Regular Expressions: Cleared
+Day 19 - File Handling: Next
 ```
 
 ---
@@ -128,12 +130,10 @@ date objects
 time objects
 datetime objects
 extracting datetime attributes
-extracting date-only and time-only parts
 strftime formatting
 strptime parsing
 timedelta basics
-adding/subtracting time
-differences between dates/datetimes
+date/time differences
 basic datetime comparisons
 practical mini-scenarios
 focused real-world final mixed exercise
@@ -148,16 +148,13 @@ Invoice due-date checker
 Key reminders:
 
 ```text
-After import datetime, use datetime.datetime.now().
-After from datetime import datetime, use datetime.now().
-Do not name files datetime.py.
-Use strftime() to turn date/time objects into strings.
-Use strptime() to turn strings into datetime objects.
-The strptime() format string must match the input string exactly.
-Use %H for 24-hour input and %I with %p for AM/PM input.
+Use the correct datetime import style.
+Use strftime() to format objects into strings.
+Use strptime() to parse strings into datetime objects.
+Match the strptime() format string exactly to the input.
 Use timedelta for duration math.
-Use total_seconds() when the full duration in seconds is needed.
-Avoid subtracting plain time objects directly when date context matters.
+Use total_seconds() when full seconds are needed.
+Avoid subtracting plain time objects directly.
 ```
 
 ---
@@ -181,18 +178,15 @@ Covered:
 ```text
 exception basics
 try / except
-catching specific exceptions
-reading exception messages with as error
-multiple except blocks
-else block for success-only logic
-finally block for always-run logic
-safe int and float conversion
-fallback value pattern
-safe date parsing with strptime()
-.get() for optional dictionary fields
-KeyError for required dictionary fields
-IndexError for invalid list index access
-practical exception handling patterns
+specific exceptions
+as error messages
+else for success-only logic
+finally for always-run logic
+safe numeric conversion
+safe date parsing
+.get() for optional fields
+KeyError for required fields
+IndexError for invalid indexes
 focused real-world final mixed exercise
 ```
 
@@ -205,21 +199,73 @@ Warehouse shipment intake checker
 Key reminders:
 
 ```text
-Catch specific exceptions instead of using bare except.
-Keep try blocks focused on the risky operation.
-Use else for success logic after a successful try block.
-Use finally for code that must always run.
+Catch specific exceptions.
+Keep try blocks focused.
+Use else for success logic.
+Use finally only when something must always run.
 Use .get() for optional dictionary fields.
-Use KeyError handling when a missing required field is an error path.
-Use ValueError for failed conversion/parsing cases.
-Use IndexError for invalid list indexes.
-Use formatted output like :.2f for money values when exact display matters.
-Do not overuse try / except when a simpler safe pattern is clearer.
+Use KeyError when a required field is missing.
+Do not overuse try / except when simple checks are clearer.
 ```
 
 ---
 
 ## Day 18 - Regular Expressions
+
+Status:
+
+```text
+Cleared
+```
+
+Notes file:
+
+```text
+day18_notes.md
+```
+
+Covered:
+
+```text
+regex basics
+Python re module
+raw strings
+re.search()
+match objects and .group()
+re.findall()
+re.match() awareness
+character classes
+quantifiers
+anchors
+groups and extraction
+re.sub() cleanup/replacement
+practical validation/search/extraction examples
+compact regex addendum awareness
+focused real-world final mixed exercise
+```
+
+Final exercise scenario:
+
+```text
+Event registration intake parser
+```
+
+Key reminders:
+
+```text
+Use raw strings for regex patterns.
+Use search() for first match, findall() for all matches, and sub() for replacement.
+Check a match exists before calling .group().
+Use groups to extract part of a larger match.
+Use anchors when validating the whole string.
+Use \. to match a real dot.
+Do not hardcode exact values when the goal is parsing.
+Keep regex patterns small and readable.
+```
+
+---
+
+## Day 19 - File Handling
 
 Status:
 
@@ -230,27 +276,21 @@ Next
 Expected focus:
 
 ```text
-regular expression basics
-Python re module
-raw strings for regex patterns
-re.search()
-re.findall()
-re.match() awareness
-basic character classes and quantifiers
-anchors
-simple groups
-re.sub()
-practical validation/search examples
+file handling basics
+open() and with open(...)
+read modes and write/append modes
+reading full content vs line by line
+writing text files
+basic path awareness
+safe file handling habits
 focused final mixed exercise
 ```
-
-Day 18 should stay paced one topic at a time and should not become a giant regex-reference dump.
 
 ---
 
 ## Current confidence level
 
 ```text
-Day 17 cleared.
-Ready for Day 18 - Regular Expressions.
+Day 18 cleared.
+Ready for Day 19 - File Handling.
 ```
