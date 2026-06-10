@@ -299,6 +299,26 @@ Use | for OR-style alternatives inside a regex pattern.
 Use \b for whole-word boundaries.
 Keep regex patterns small and readable instead of writing giant patterns too early.
 Do not hardcode exact values when the goal is to parse a reusable pattern.
+
+Use with open(file_name, mode) as file: as the default pattern for working with files.
+with open(...) automatically closes the file after the block ends.
+Use open(file_name, "r") to read an existing file.
+Use open(file_name, "w") to write to a file and replace existing content.
+Use open(file_name, "a") to append content to the end of a file.
+Opening a file in "w" mode resets existing file content when the file is opened.
+Multiple write() calls inside the same open block continue writing from the current file position.
+file.write() does not add a newline automatically.
+Use \n inside written text when each item should appear on its own line.
+Use file.read() when you want the full file content as one string.
+Loop directly through a file object when you want to process one line at a time.
+Use line.strip() when reading lines if you need to remove surrounding whitespace or newline characters.
+Use splitlines() when a full file string needs to become a list of lines.
+Reading a missing file in "r" mode raises FileNotFoundError.
+Use except FileNotFoundError when reading a file that may not exist.
+Use encoding="utf-8" as a good habit for normal text files.
+Keep file paths simple while learning; a plain file name means the current working folder.
+Use append mode carefully because repeated script runs can add duplicate content.
+Do not use "w" mode on important files unless replacing the content is intended.
 ```
 
 ---

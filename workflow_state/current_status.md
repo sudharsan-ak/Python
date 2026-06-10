@@ -9,8 +9,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Week 1 - Cleared
 Week 2 - Cleared
 Week 3 - In progress
-Completed through: Day 18 - Regular Expressions
-Next: Day 19 - File Handling
+Completed through: Day 19 - File Handling
+Next: Day 20 - Python Package Manager
 ```
 
 ## Detailed status
@@ -34,7 +34,8 @@ Day 15 - Cleared
 Day 16 - Cleared
 Day 17 - Cleared
 Day 18 - Cleared
-Next: Day 19 - File Handling
+Day 19 - Cleared
+Next: Day 20 - Python Package Manager
 ```
 
 ## Current Project Sources structure
@@ -55,6 +56,7 @@ day15_notes.md
 day16_notes.md
 day17_notes.md
 day18_notes.md
+day19_notes.md
 ```
 
 Optional transition file:
@@ -65,7 +67,7 @@ learning_index.md
 
 If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 19
+## Files to read before starting Day 20
 
 ```text
 README.md
@@ -81,33 +83,35 @@ day15_notes.md
 day16_notes.md
 day17_notes.md
 day18_notes.md
+day19_notes.md
 ```
 
 ## Active week status
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16, Day 17, Day 18
-Next: Day 19
+Completed: Day 15, Day 16, Day 17, Day 18, Day 19
+Next: Day 20
 ```
 
 ## Next day
 
 ```text
-Day 19 - File Handling
+Day 20 - Python Package Manager
 ```
 
-Expected Day 19 focus:
+Expected Day 20 focus:
 
 ```text
-file handling basics
-opening and reading files
-with open(...) context manager
-file modes like r, w, a
-writing and appending text
-reading line by line
-basic file path awareness
-safe file handling habits
+Python package manager basics
+pip awareness
+installing packages
+checking installed packages
+uninstalling packages
+requirements.txt awareness
+package vs module distinction
+virtual environment awareness only if useful
+safe package management habits
 focused final mixed exercise
 ```
 
@@ -127,5 +131,5 @@ yield
 ## Current confidence level
 
 ```text
-Ready for Day 19 - File Handling
+Ready for Day 20 - Python Package Manager
 ```

@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 18
-Next update: after Day 19, if new reusable mistakes are found
+Current scope: Day 1 through Day 19
+Next update: after Day 20, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -147,6 +147,13 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | Over-specific phone patterns | Use `\d{3}-\d{3}-\d{4}` instead of hardcoding a starting number like `555` |
 | Regex over-bloating | Learn and use small patterns first; avoid giant unreadable regex |
 | Exercise copy-paste issue | Topic exercises should vary from teaching examples instead of repeating exact same values |
+| File write overwrite timing | `"w"` clears existing content when the file is opened, not on every `write()` call |
+| Multiple `write()` calls | Inside one open block, each `write()` continues from the current file position |
+| Missing newlines in files | `write()` does not add line breaks automatically; add `\n` yourself |
+| Append mode repeated runs | `"a"` keeps adding content, so rerunning scripts can duplicate appended lines |
+| Missing file read | Reading a missing file in `"r"` mode raises `FileNotFoundError` |
+| Manual file closing | Prefer `with open(...)` over manual `open()` / `close()` while learning |
+| File path confusion | A plain file name points to the current working folder, not anywhere on the computer |
 
 ---
 
@@ -164,6 +171,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log updated through Day 18.
-Ready to keep using during Day 19 - File Handling.
+Mistakes log updated through Day 19.
+Ready to keep using during Day 20 - Python Package Manager.
 ```
