@@ -1,7 +1,5 @@
 # Week 1 Notes - Python Foundations
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
@@ -455,10 +453,3 @@ value -> variable -> type -> operation -> collection -> choosing the right colle
 | One-item tuple | Use `("Python",)` |
 | Empty set | Use `set()`, not `{}` |
 | Set order/indexing | Never depend on order or indexing |
-
-## Week 1 final status
-
-```text
-Week 1 - Cleared
-Ready for Week 2.
-```

@@ -1,7 +1,5 @@
 # Week 2 Notes - Core Control Flow and Data Handling
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
@@ -439,10 +437,3 @@ data -> decision -> repetition -> reusable logic -> modular code -> compact data
 | lambda | Use only for tiny temporary logic |
 | sorting key | Use `key=function_name`, not `key=function_name()` |
 | `.sort()` | Mutates original list and returns `None` |
-
-## Week 2 final status
-
-```text
-Week 2 - Cleared
-Ready for Day 15 - Python Type Errors
-```
