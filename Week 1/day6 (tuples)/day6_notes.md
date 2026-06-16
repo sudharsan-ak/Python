@@ -261,9 +261,3 @@ Use count() and index().
 Use tuples for fixed grouped data.
 Use lists for data that should change.
 ```
-
-## Ready for next day
-
-```text
-Day 7 - Sets
-```

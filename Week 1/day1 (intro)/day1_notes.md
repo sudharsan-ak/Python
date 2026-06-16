@@ -183,9 +183,3 @@ Use int() before math with numeric input.
 Use f-strings for clean output.
 Python does not need semicolons.
 ```
-
-## Ready for next day
-
-```text
-Day 2 - Variables, Built-in Functions, Data Types
-```

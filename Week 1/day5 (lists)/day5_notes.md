@@ -280,9 +280,3 @@ Use sort() to sort the original list.
 Use sorted() to create a sorted copy.
 Do not assign the result of sort() to a variable.
 ```
-
-## Ready for next day
-
-```text
-Day 6 - Tuples
-```

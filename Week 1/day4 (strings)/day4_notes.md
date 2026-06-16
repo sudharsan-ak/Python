@@ -278,9 +278,3 @@ Use split() to break strings into lists.
 Use join() to combine list items into strings.
 Use character check methods for validation-style checks.
 ```
-
-## Ready for next day
-
-```text
-Day 5 - Lists
-```

@@ -371,7 +371,7 @@ checking output types
 
 ---
 
-## Final mixed exercise status
+## Final mixed exercise summary
 
 Final scenario:
 
@@ -404,7 +404,7 @@ conditionals
 f-strings
 ```
 
-Final status:
+Final result:
 
 ```text
 Cleared
@@ -437,9 +437,3 @@ If output shows None, check print() vs return and make sure files were saved.
 ```
 
 ---
-
-## Ready for next day
-
-```text
-Day 13 - Comprehension
-```

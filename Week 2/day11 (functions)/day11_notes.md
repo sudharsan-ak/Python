@@ -313,7 +313,7 @@ calling passed functions inside another function
 
 ---
 
-# Final mixed exercise status
+# Final mixed exercise summary
 
 Final scenario:
 
@@ -335,7 +335,7 @@ boolean-returning function
 passing a function into another function
 ```
 
-Final status:
+Final result:
 
 ```text
 Cleared
@@ -368,9 +368,3 @@ Use function_name() only when you want to call it immediately.
 ```
 
 ---
-
-# Ready for next day
-
-```text
-Day 12 - Modules
-```

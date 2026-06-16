@@ -273,7 +273,7 @@ sorting lists of dictionaries
 
 ---
 
-# Final mixed exercise status
+# Final mixed exercise summary
 
 Scenario:
 
@@ -296,7 +296,7 @@ list comprehension
 lambda vs def comments
 ```
 
-Final status:
+Final result:
 
 ```text
 Day 14 final mixed exercise cleared.
@@ -325,10 +325,4 @@ sorted() creates a new sorted list.
 key= accepts a function used to calculate the sorting value.
 Use key=function_name, not key=function_name().
 Python key functions extract one sorting value; JavaScript sort callbacks compare two items.
-```
-
-## Ready for next day
-
-```text
-Day 15 - Python Type Errors
 ```

@@ -270,9 +270,3 @@ Use set() to remove duplicates.
 Use +=, -=, *=, /= to update values.
 Use % to get the remainder.
 ```
-
-## Ready for next day
-
-```text
-Day 3 - Operators
-```

@@ -407,7 +407,7 @@ nested loops with lists, ranges, and dictionaries
 
 ---
 
-# Final mixed exercise status
+# Final mixed exercise summary
 
 Final scenario:
 
@@ -464,9 +464,3 @@ Nested loops multiply work, so use them carefully.
 ```
 
 ---
-
-# Ready for next day
-
-```text
-Day 11 - Functions
-```

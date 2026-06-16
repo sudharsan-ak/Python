@@ -243,9 +243,3 @@ Avoid unnecessary == True and == False.
 Use parentheses to make mixed logic obvious.
 Normal division / returns a float.
 ```
-
-## Ready for next day
-
-```text
-Day 4 - Strings
-```

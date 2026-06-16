@@ -365,7 +365,7 @@ short-hand conditional assignment
 | Testing gap | Empty project-name branch was initially skipped | Retested by pressing Enter and confirmed the empty-input branch. |
 | Style | Wrote `age >=18` | Prefer `age >= 18` for readability. |
 
-## Final mixed exercise status
+## Final mixed exercise summary
 
 Scenario:
 ```text
@@ -392,7 +392,7 @@ workshop_track: Backend
 preferred_language: Python
 ```
 
-Final status:
+Final result:
 ```text
 Cleared
 ```
@@ -420,10 +420,4 @@ Use nested conditionals only when the second check depends on the first.
 Prefer flatter elif chains when they read cleaner.
 Use short-hand conditionals only for simple two-way assignments.
 Do not force complex branching into a one-liner.
-```
-
-## Ready for next day
-
-```text
-Day 10 - Loops
 ```

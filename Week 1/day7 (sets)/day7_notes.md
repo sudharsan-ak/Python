@@ -317,9 +317,3 @@ symmetric_difference() returns non-shared items.
 issubset(), issuperset(), and isdisjoint() return booleans.
 Use sets for uniqueness, membership checks, and group comparisons.
 ```
-
-## Ready for next day
-
-```text
-Day 8 - Dictionaries
-```

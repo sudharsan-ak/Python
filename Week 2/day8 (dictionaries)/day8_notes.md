@@ -301,7 +301,7 @@ choosing dict/list/tuple/set
 | Final exercise initially missed printing updated `enrollment` after `pop()` | Fixed by printing both the removed value and updated dictionary. |
 | Semicolon after `print()` | Works, but it is JavaScript muscle memory; avoid semicolons in Python. |
 
-## Final mixed exercise status
+## Final mixed exercise summary
 
 Final scenario:
 
@@ -326,13 +326,13 @@ safe nested get()
 
 One prompt miss was corrected: after removing `"level"`, the updated `enrollment` dictionary also needed to be printed.
 
-Final status:
+Final result:
 
 ```text
-Day 8 - Dictionaries: Cleared
+Day 8 final mixed exercise cleared.
 ```
 
-## Key reminders before Day 9
+## Key takeaways
 
 ```text
 Use dictionaries for labeled data.
@@ -352,10 +352,4 @@ Remember copy() is shallow.
 Use nested dictionaries to group related data.
 Use chained square brackets for nested access.
 Use get("nested_key", {}) for safer nested access.
-```
-
-## Next day
-
-```text
-Day 9 - Conditionals
 ```

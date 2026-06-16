@@ -283,7 +283,7 @@ light lambda usage
 
 ---
 
-## Final mixed exercise status
+## Final mixed exercise summary
 Final scenario:
 ```text
 Python bootcamp analytics cleanup
@@ -300,7 +300,7 @@ generator expression
 tuple conversion
 light lambda awareness
 ```
-Final status:
+Final result:
 ```text
 Cleared
 ```
@@ -320,9 +320,4 @@ Parentheses with comprehension-like syntax create a generator expression.
 Python does not have true tuple comprehension.
 Use tuple(...) to build a tuple from an iterable or generator expression.
 Use lambda only for tiny one-expression logic; prefer def for reusable logic.
-```
-
-## Ready for next day
-```text
-Day 14 - Higher Order Functions
 ```
