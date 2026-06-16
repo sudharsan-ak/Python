@@ -1,7 +1,5 @@
 # Day 14 Notes - Higher Order Functions
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 

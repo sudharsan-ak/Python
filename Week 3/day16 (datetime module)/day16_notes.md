@@ -1,7 +1,5 @@
 # Day 16 Notes - Python Date Time
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
@@ -278,44 +276,4 @@ Final result:
 
 ```text
 Day 16 final mixed exercise cleared.
-```
-
----
-
-# Mistakes and corrections from Day 16
-
-```text
-Do not mix datetime import styles unless there is a reason.
-After import datetime, use datetime.datetime.now().
-After from datetime import datetime, use datetime.now().
-Do not name files datetime.py.
-Use attributes like .year without parentheses.
-Use methods like .date() and .time() with parentheses.
-strftime() formats objects into strings.
-strptime() parses strings into datetime objects.
-The strptime() format must match the input string exactly.
-Use %H for 24-hour input and %I with %p for AM/PM input.
-Use timedelta for duration math.
-Use total_seconds() for the full duration in seconds.
-Do not subtract plain time objects directly when date context matters.
-```
-
----
-
-# Day 16 status
-
-```text
-Day 16 - Python Date Time: Cleared
-Week 3 Day 2: Cleared
-Next: Day 17 - Exception Handling
-```
-
-## What to remember before Day 17
-
-```text
-Read import style carefully before calling datetime methods.
-Keep object-to-string and string-to-object conversion separate.
-Use timedelta for date/time duration math.
-When parsing dates, match the format string exactly to the input text.
-For time differences, prefer datetime objects over plain time objects.
 ```

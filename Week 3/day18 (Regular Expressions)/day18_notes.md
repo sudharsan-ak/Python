@@ -1,7 +1,5 @@
 # Day 18 Notes - Regular Expressions
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
@@ -264,40 +262,4 @@ Final result:
 
 ```text
 Day 18 final mixed exercise cleared.
-```
-
----
-
-# Mistakes and corrections from Day 18
-
-Important corrections:
-
-```text
-Use raw strings for regex patterns.
-Check that search()/match() returned a match before calling .group().
-Do not hardcode the exact value when the goal is parsing.
-Use groups to extract the part you need from a larger match.
-Use generic phone patterns like \d{3}-\d{3}-\d{4} instead of hardcoding 555.
-Use anchors for validation when the whole string must match.
-Remember that findall() behaves differently when groups are present.
-Use \. when matching a real dot.
-Keep regex exercises practical instead of turning them into a symbol dump.
-```
-
----
-
-# Day 18 status
-
-```text
-Day 18 - Regular Expressions: Cleared
-Week 3 Day 4: Cleared
-Next: Day 19 - File Handling
-```
-
-## What to remember before Day 19
-
-```text
-Use regex when text has patterns, not for every string problem.
-Prefer small readable patterns over clever giant patterns.
-Use search/findall/groups/sub based on the actual task: find, extract, validate, or clean.
 ```

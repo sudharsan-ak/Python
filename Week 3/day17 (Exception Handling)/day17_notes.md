@@ -1,7 +1,5 @@
 # Day 17 Notes - Exception Handling
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
@@ -271,43 +269,4 @@ Final result:
 
 ```text
 Day 17 final mixed exercise cleared.
-```
-
----
-
-# Mistakes and corrections from Day 17
-
-Important corrections:
-
-```text
-Use specific exceptions instead of bare except.
-Use else for success-only logic.
-Use finally for code that must always run.
-Keep try blocks focused on risky operations.
-Use .get() for optional dictionary fields.
-Use KeyError handling for required missing dictionary fields.
-Use formatted money output like :.2f when exact two-decimal display is required.
-When testing alternate dictionary values, keep the active dictionary clean.
-Avoid over-fragmenting exercise tasks into too many tiny numbered steps.
-```
-
----
-
-# Day 17 status
-
-```text
-Day 17 - Exception Handling: Cleared
-Week 3 Day 3: Cleared
-Next: Day 18 - Regular Expressions
-```
-
-## What to remember before Day 18
-
-```text
-Read the exact error type before deciding what to catch.
-Catch the smallest useful exception, not everything.
-Use else for successful conversions or lookups.
-Use finally only when something must always happen.
-Do not replace simple .get() usage with unnecessary try / except.
-Date parsing and numeric conversion are common places where exception handling is useful.
 ```

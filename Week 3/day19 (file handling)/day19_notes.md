@@ -1,7 +1,5 @@
 # Day 19 Notes - File Handling
 
-Status: Cleared
-
 Source backbone:
 https://github.com/Asabeneh/30-Days-Of-Python
 
@@ -234,42 +232,4 @@ Final result:
 
 ```text
 Day 19 final mixed exercise cleared.
-```
-
----
-
-# Mistakes and corrections from Day 19
-
-Important corrections:
-
-```text
-Opening a file with "w" resets existing content once, when the file is opened.
-Multiple write() calls inside the same open block keep adding from the current position.
-write() does not automatically add new lines.
-Use \n when each written item should appear on its own line.
-Append mode keeps adding content and can duplicate lines if the script is run repeatedly.
-Reading a missing file in "r" mode raises FileNotFoundError.
-Use with open(...) instead of manual close() for beginner-safe file handling.
-Use encoding="utf-8" as a good text-file habit.
-```
-
----
-
-# Day 19 status
-
-```text
-Day 19 - File Handling: Cleared
-Week 3 Day 5: Cleared
-Next: Day 20 - Python Package Manager
-```
-
-## What to remember before Day 20
-
-```text
-Use with open(...) as the default file pattern.
-Choose file mode intentionally.
-Do not use "w" unless overwriting is okay.
-Use "a" when adding to existing file content.
-Use read() for full content and a file loop for line-by-line processing.
-Handle missing files with FileNotFoundError when the file may not exist.
 ```
