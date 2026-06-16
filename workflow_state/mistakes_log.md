@@ -8,8 +8,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 ## Scope
 
 ```text
-Current scope: Day 1 through Day 19
-Next update: after Day 20, if new reusable mistakes are found
+Current scope: Day 1 through Day 20
+Next update: after Day 21, if new reusable mistakes are found
 ```
 
 Use this file as the dedicated place for mistakes and gotchas. Keep `learning_index_part1.md` focused on historical progress, week summaries, and day-specific reminders.
@@ -154,6 +154,15 @@ Use this file as the dedicated place for mistakes and gotchas. Keep `learning_in
 | Missing file read | Reading a missing file in `"r"` mode raises `FileNotFoundError` |
 | Manual file closing | Prefer `with open(...)` over manual `open()` / `close()` while learning |
 | File path confusion | A plain file name points to the current working folder, not anywhere on the computer |
+| Install vs import confusion | pip installs external packages in the terminal; import uses installed packages inside Python code |
+| Wrong pip environment | Prefer `python -m pip` so pip is tied to the Python interpreter being used |
+| External package missing | `ModuleNotFoundError` can mean the package is not installed in the active environment |
+| requirements.txt syntax trap | Use `package==version` for exact pins, not a single equals sign |
+| requirements.txt code mistake | Do not put Python code like `import requests` inside `requirements.txt` |
+| Blind pip freeze dump | `pip freeze > requirements.txt` can dump unrelated packages from a messy environment |
+| Uninstalling active dependencies | Removing a package that the current project imports can break the project |
+| Windows path string escapes | Use raw strings or escaped backslashes for paths like `.\.venv\Scripts\Activate.ps1` |
+| Global environment junk drawer | Installing everything globally makes it hard to know what a project really depends on |
 
 ---
 
@@ -171,6 +180,6 @@ After each completed day, add only reusable mistakes that are likely to happen a
 ## Current status
 
 ```text
-Mistakes log updated through Day 19.
-Ready to keep using during Day 20 - Python Package Manager.
+Mistakes log updated through Day 20.
+Ready to keep using during Day 21 - Classes and Objects.
 ```

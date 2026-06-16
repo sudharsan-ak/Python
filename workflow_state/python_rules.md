@@ -319,6 +319,36 @@ Use encoding="utf-8" as a good habit for normal text files.
 Keep file paths simple while learning; a plain file name means the current working folder.
 Use append mode carefully because repeated script runs can add duplicate content.
 Do not use "w" mode on important files unless replacing the content is intended.
+Use pip to install and manage external Python packages.
+Use python -m pip when you want pip tied clearly to the Python interpreter being used.
+Use python -m pip install package_name to install an external package.
+Use import package_name inside Python code only after the package is available in the active environment.
+Remember installing and importing are separate actions.
+A module is usually one Python file.
+A package is a collection/folder of Python modules or related code.
+Built-in modules come with Python; external packages must be installed first.
+Use python -m pip list to check installed packages in the current environment.
+Use python -m pip show package_name to inspect one installed package.
+Use python -m pip uninstall package_name to remove a package from the environment.
+Do not uninstall a package that the current project still imports unless you intend to break or change that dependency.
+ModuleNotFoundError for an external package often means the package is not installed in the active Python environment.
+Use requirements.txt to list external packages needed by a project.
+Use package==version in requirements.txt when an exact version is required.
+Use python -m pip install -r requirements.txt to install packages listed in requirements.txt.
+Do not put Python import statements inside requirements.txt.
+Use python -m pip freeze to print installed packages in requirements-style format.
+Do not blindly run python -m pip freeze > requirements.txt in a messy environment because it can dump unrelated packages.
+For small beginner projects, list the direct packages the project actually uses in requirements.txt.
+Remember installed packages can have their own dependencies, and pip usually manages those automatically.
+Use python -m venv .venv to create a virtual environment when a project needs isolated packages.
+Use .\.venv\Scripts\Activate.ps1 to activate a virtual environment in PowerShell.
+Use deactivate to leave an activated virtual environment.
+Use raw strings or escaped backslashes when storing Windows paths in Python strings.
+Use virtual environments for real projects so global Python does not become a messy shared package space.
+Install only packages the project actually needs.
+Check package names carefully before installing.
+Do not run random install commands from untrusted sources.
+
 ```
 
 ---

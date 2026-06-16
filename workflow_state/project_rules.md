@@ -103,20 +103,21 @@ Optional style note -> code works and matches the prompt, but can be cleaner.
 
 Daily and weekly notes should be clean study/reference material.
 
-Good notes include:
+Daily notes should be compact revision/reference notes, not progress archives.
+
+Daily notes should include:
 
 ```text
-concept explanations
+topics covered
+key concepts
 important syntax
-small examples
-exercise summary
-mistakes and corrections
-final status
-next-day prep
-week-level recap when consolidating
+small examples only where useful
+concise exercise summary
+final mixed exercise status, if the day had one
+key takeaways/gotchas directly useful for revision
 ```
 
-Avoid:
+Daily notes should avoid:
 
 ```text
 every exercise prompt
@@ -124,12 +125,28 @@ full practice-file code
 long repeated explanations
 chat transcript style
 bloated textbook-style notes
+repeated mistakes/corrections sections
+Day X status
+next-day prep
+source-file update summaries
+content that belongs in current_status.md, mistakes_log.md, or learning_index_part*.md
+```
+
+File responsibility for daily notes:
+
+```text
+Day status and next-day prep belong in current_status.md and learning_index_part*.md.
+Reusable mistakes belong in mistakes_log.md.
+Coding rules belong in python_rules.md.
+Workflow rules belong in project_rules.md.
+Daily notes should only keep compact gotchas that help revision of that day's topic.
 ```
 
 Preferred size guideline:
 
 ```text
-Daily notes should usually stay around 250-450 lines.
+Daily notes should usually stay compact and proportional to the topic.
+Small/light days should not be padded to hit a line-count target.
 Weekly notes can be longer, but should still be compact and organized.
 A weekly file should summarize and consolidate, not simply paste all daily files together.
 ```
@@ -145,19 +162,23 @@ Are you ready for me to generate dayX_notes.md and update the project source fil
 Only after confirmation, generate:
 
 ```text
-Create dayX_notes.md as clean study/reference notes:
+Create dayX_notes.md as compact study/reference notes:
 - topics covered
 - key concepts
+- important syntax
 - small examples only where useful
-- summary of exercises practiced
-- corrections/mistakes
-- final mixed exercise status
-- Day X status
-- what to remember before Day X+1
+- concise exercise summary
+- final mixed exercise status, if applicable
+- key takeaways/gotchas directly useful for revision
 
-Do not include every exercise block.
-Do not include the full final mixed exercise code unless explicitly asked.
-Do not make it a chat transcript.
+Do not include:
+- every exercise block
+- full final mixed exercise code unless explicitly asked
+- chat transcript style
+- repeated mistakes/corrections sections
+- Day X status
+- next-day prep
+- source-file update summaries
 ```
 
 Also update the relevant source files:

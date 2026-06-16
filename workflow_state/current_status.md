@@ -9,8 +9,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Week 1 - Cleared
 Week 2 - Cleared
 Week 3 - In progress
-Completed through: Day 19 - File Handling
-Next: Day 20 - Python Package Manager
+Completed through: Day 20 - Python Package Manager
+Next: Day 21 - Classes and Objects
 ```
 
 ## Detailed status
@@ -35,7 +35,8 @@ Day 16 - Cleared
 Day 17 - Cleared
 Day 18 - Cleared
 Day 19 - Cleared
-Next: Day 20 - Python Package Manager
+Day 20 - Cleared
+Next: Day 21 - Classes and Objects
 ```
 
 ## Current Project Sources structure
@@ -57,6 +58,7 @@ day16_notes.md
 day17_notes.md
 day18_notes.md
 day19_notes.md
+day20_notes.md
 ```
 
 Optional transition file:
@@ -67,7 +69,7 @@ learning_index.md
 
 If `learning_index.md` still exists in Project Sources, replace it with a small deprecation stub or remove it if possible. Do not keep the old bloated version.
 
-## Files to read before starting Day 20
+## Files to read before starting Day 21
 
 ```text
 README.md
@@ -84,34 +86,35 @@ day16_notes.md
 day17_notes.md
 day18_notes.md
 day19_notes.md
+day20_notes.md
 ```
 
 ## Active week status
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16, Day 17, Day 18, Day 19
-Next: Day 20
+Completed: Day 15, Day 16, Day 17, Day 18, Day 19, Day 20
+Next: Day 21
 ```
 
 ## Next day
 
 ```text
-Day 20 - Python Package Manager
+Day 21 - Classes and Objects
 ```
 
-Expected Day 20 focus:
+Expected Day 21 focus:
 
 ```text
-Python package manager basics
-pip awareness
-installing packages
-checking installed packages
-uninstalling packages
-requirements.txt awareness
-package vs module distinction
-virtual environment awareness only if useful
-safe package management habits
+class basics
+object/instance basics
+attributes
+methods
+self
+__init__ constructor basics
+creating multiple objects from one class
+instance data vs shared structure
+simple real-world class examples
 focused final mixed exercise
 ```
 
@@ -131,5 +134,5 @@ yield
 ## Current confidence level
 
 ```text
-Ready for Day 20 - Python Package Manager
+Ready for Day 21 - Classes and Objects
 ```

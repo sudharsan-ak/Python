@@ -11,8 +11,8 @@ https://github.com/Asabeneh/30-Days-Of-Python
 Part 2 covers Week 3 and Week 4.
 Week 3: Day 15 to Day 21 - In progress
 Week 4: Day 22 to Day 28 - Not started
-Current completed through: Day 19
-Next: Day 20 - Python Package Manager
+Current completed through: Day 20
+Next: Day 21 - Classes and Objects
 ```
 
 This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into a notes dump.
@@ -28,7 +28,8 @@ This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into 
 | Day 17 | Week 3 Day 3 | Exception Handling | Cleared | `day17_notes.md` |
 | Day 18 | Week 3 Day 4 | Regular Expressions | Cleared | `day18_notes.md` |
 | Day 19 | Week 3 Day 5 | File Handling | Cleared | `day19_notes.md` |
-| Day 20 | Week 3 Day 6 | Python Package Manager | Next | TBD |
+| Day 20 | Week 3 Day 6 | Python Package Manager | Cleared | `day20_notes.md` |
+| Day 21 | Week 3 Day 7 | Classes and Objects | Next | TBD |
 
 ---
 
@@ -36,8 +37,8 @@ This file is the active Weeks 3-4 archive. Keep it compact. Do not turn it into 
 
 ```text
 Week 3 - In progress
-Completed: Day 15, Day 16, Day 17, Day 18, Day 19
-Next: Day 20
+Completed: Day 15, Day 16, Day 17, Day 18, Day 19, Day 20
+Next: Day 21
 ```
 
 Week 3 currently includes:
@@ -48,7 +49,8 @@ Day 16 - Python Date Time: Cleared
 Day 17 - Exception Handling: Cleared
 Day 18 - Regular Expressions: Cleared
 Day 19 - File Handling: Cleared
-Day 20 - Python Package Manager: Next
+Day 20 - Python Package Manager: Cleared
+Day 21 - Classes and Objects: Next
 ```
 
 ---
@@ -292,7 +294,7 @@ reading full content with read()
 reading line by line with a file loop
 writing text files
 appending text files
-newline handling with \n
+newline handling with `\n`
 encoding="utf-8" awareness
 FileNotFoundError handling
 safe file handling habits
@@ -326,21 +328,76 @@ Use encoding="utf-8" as a good text-file habit.
 Status:
 
 ```text
+Cleared
+```
+
+Notes file:
+
+```text
+day20_notes.md
+```
+
+Covered:
+
+```text
+package manager basics
+pip awareness
+package vs module distinction
+installing external packages
+importing installed packages
+checking installed packages with pip list
+showing package details with pip show
+uninstall command awareness
+requirements.txt purpose
+exact version pins with ==
+installing from requirements.txt
+pip freeze awareness
+virtual environment awareness
+safe package management habits
+focused final mixed exercise
+```
+
+Final exercise scenario:
+
+```text
+Project setup checklist for a small API helper project
+```
+
+Key reminders:
+
+```text
+pip installs packages from the terminal.
+import uses installed packages inside Python code.
+Use python -m pip for clearer environment targeting.
+Use requirements.txt to list project dependencies.
+Use package==version for exact version pins.
+Do not blindly run pip freeze in a messy environment.
+Do not uninstall packages that the current project still imports.
+Use virtual environments to isolate packages for real projects.
+```
+
+---
+
+## Day 21 - Classes and Objects
+
+Status:
+
+```text
 Next
 ```
 
 Expected focus:
 
 ```text
-Python package manager basics
-pip awareness
-installing packages
-checking installed packages
-uninstalling packages
-requirements.txt awareness
-package vs module distinction
-virtual environment awareness only if useful
-safe package management habits
+class basics
+object/instance basics
+attributes
+methods
+self
+__init__ constructor basics
+creating multiple objects from one class
+instance data vs shared structure
+simple real-world class examples
 focused final mixed exercise
 ```
 
@@ -349,6 +406,6 @@ focused final mixed exercise
 ## Current confidence level
 
 ```text
-Day 19 cleared.
-Ready for Day 20 - Python Package Manager.
+Day 20 cleared.
+Ready for Day 21 - Classes and Objects.
 ```
